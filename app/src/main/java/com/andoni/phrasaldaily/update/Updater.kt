@@ -19,6 +19,7 @@ object Updater {
 
     /** Returns the latest release if it is newer than the installed app, otherwise null. */
     suspend fun check(): UpdateInfo? = withContext(Dispatchers.IO) {
+        if (!BuildConfig.SELF_UPDATE) return@withContext null
         runCatching {
             val conn = (URL(LATEST_RELEASE).openConnection() as HttpURLConnection).apply {
                 connectTimeout = 10_000

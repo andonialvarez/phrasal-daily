@@ -6,40 +6,54 @@ plugins {
 
 android {
     namespace = "com.andoni.phrasaldaily"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.andoni.phrasaldaily"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         // CI passes the run number so every published build is a newer version.
         val build = (System.getenv("BUILD_NUMBER") ?: "1").toInt()
         versionCode = build
         versionName = "1.0.$build"
     }
 
-    // A fixed key (from GitHub secrets) so each new APK installs over the previous one.
-    val keystorePath = System.getenv("SIGNING_KEYSTORE_PATH")
+    // Google Play upload key, only present in CI when the repository secrets exist.
+    val uploadKeystore = System.getenv("SIGNING_KEYSTORE_PATH")
     signingConfigs {
         // Shared debug key (standard public android/android credentials, like React Native's template),
-        // so builds from any machine install over each other.
+        // so the GitHub builds always install over each other.
         getByName("debug") {
             storeFile = file("debug.keystore")
         }
-        if (keystorePath != null) {
-            create("release") {
-                storeFile = file(keystorePath)
+        if (uploadKeystore != null) {
+            create("upload") {
+                storeFile = file(uploadKeystore)
                 storePassword = System.getenv("SIGNING_PASSWORD")
-                keyAlias = System.getenv("SIGNING_KEY_ALIAS") ?: "phrasal"
+                keyAlias = System.getenv("SIGNING_KEY_ALIAS") ?: "upload"
                 keyPassword = System.getenv("SIGNING_PASSWORD")
             }
         }
     }
 
+    flavorDimensions += "distribution"
+    productFlavors {
+        // Installed from the GitHub download link; updates itself from GitHub Releases.
+        create("github") {
+            dimension = "distribution"
+            buildConfigField("boolean", "SELF_UPDATE", "true")
+            signingConfig = signingConfigs.getByName("debug")
+        }
+        // Published on Google Play: Play handles updates, so no self-update and no extra permissions.
+        create("play") {
+            dimension = "distribution"
+            buildConfigField("boolean", "SELF_UPDATE", "false")
+            signingConfig = signingConfigs.findByName("upload") ?: signingConfigs.getByName("debug")
+        }
+    }
+
     buildTypes {
         release {
-            signingConfig = if (keystorePath != null) signingConfigs.getByName("release")
-            else signingConfigs.getByName("debug")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")

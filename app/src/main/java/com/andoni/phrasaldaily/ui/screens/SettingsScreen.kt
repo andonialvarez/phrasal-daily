@@ -65,6 +65,8 @@ val contentModeLabels = mapOf(
     ContentMode.BOTH to ("Phrasal verb + false friend" to "Las dos cosas cada día, para ir a tope."),
 )
 
+const val PRIVACY_POLICY_URL = "https://github.com/andonialvarez/phrasal-daily/blob/main/PRIVACY.md"
+
 fun formatTime(hour: Int, minute: Int) = "%02d:%02d".format(hour, minute)
 
 @Composable
@@ -186,7 +188,7 @@ fun SettingsScreen(vm: AppViewModel, user: UserData) {
             }
         }
 
-        SettingsCard("Actualizaciones") {
+        if (BuildConfig.SELF_UPDATE) SettingsCard("Actualizaciones") {
             val updateMessage by vm.updateMessage.collectAsStateWithLifecycle()
             Text(
                 "Versión instalada: ${BuildConfig.VERSION_NAME}. La app busca versiones nuevas cada vez que la abres.",
@@ -200,6 +202,19 @@ fun SettingsScreen(vm: AppViewModel, user: UserData) {
             updateMessage?.let {
                 Text(it, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 6.dp))
             }
+        }
+
+        SettingsCard("Acerca de") {
+            Text(
+                "Todo tu progreso se guarda solo en este móvil. La app no recoge ni comparte datos personales.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            TextButton(onClick = {
+                runCatching {
+                    context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(PRIVACY_POLICY_URL)))
+                }
+            }) { Text("Política de privacidad") }
         }
 
         Text(

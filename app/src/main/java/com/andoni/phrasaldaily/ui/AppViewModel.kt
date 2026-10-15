@@ -3,6 +3,7 @@ package com.andoni.phrasaldaily.ui
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.andoni.phrasaldaily.BuildConfig
 import com.andoni.phrasaldaily.data.ContentMode
 import com.andoni.phrasaldaily.data.ContentRepository
 import com.andoni.phrasaldaily.data.FalseFriend
@@ -62,6 +63,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     private var lastUpdateCheck = 0L
 
     fun checkForUpdates(manual: Boolean = false) = viewModelScope.launch {
+        if (!BuildConfig.SELF_UPDATE) return@launch
         val now = System.currentTimeMillis()
         if (!manual && now - lastUpdateCheck < 60 * 60 * 1000L) return@launch
         lastUpdateCheck = now

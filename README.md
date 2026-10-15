@@ -23,9 +23,13 @@ Cada push a `main` lanza GitHub Actions, que compila el APK y lo publica como *R
 2. Android te pedirá permitir instalar apps desde el navegador: acéptalo e instala.
 3. Cada vez que abras la app, comprueba si hay una versión nueva en GitHub y te ofrece actualizarla (también desde Ajustes > Buscar actualizaciones).
 
+## Google Play
+
+La versión `play` no se actualiza sola (lo prohíbe Google Play). Requisitos y pasos: [PUBLICAR_EN_GOOGLE_PLAY.md](PUBLICAR_EN_GOOGLE_PLAY.md). Privacidad: [PRIVACY.md](PRIVACY.md).
+
 ## Compilar en local
 
-Android Studio (Ladybug o posterior): abre la carpeta y pulsa Run. O desde terminal: `./gradlew assembleDebug`.
+Android Studio (Ladybug o posterior): abre la carpeta y pulsa Run. O desde terminal: `./gradlew assembleGithubDebug` (o `assemblePlayDebug`).
 
 ## Firma
 
