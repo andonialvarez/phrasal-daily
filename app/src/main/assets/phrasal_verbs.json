@@ -1,0 +1,1992 @@
+[
+ {
+  "v": "give up",
+  "ipa": "/ɡɪv ˈʌp/",
+  "say": "guiv áp",
+  "es": "rendirse; dejar (un hábito)",
+  "def": "Dejar de intentar algo o abandonar una costumbre.",
+  "ex": "Don't give up, you're almost there!",
+  "exEs": "¡No te rindas, ya casi lo tienes!",
+  "lvl": "A2"
+ },
+ {
+  "v": "wake up",
+  "ipa": "/weɪk ˈʌp/",
+  "say": "uéik áp",
+  "es": "despertarse",
+  "def": "Dejar de dormir.",
+  "ex": "I usually wake up at seven, even on weekends.",
+  "exEs": "Normalmente me despierto a las siete, incluso los fines de semana.",
+  "lvl": "A1"
+ },
+ {
+  "v": "get up",
+  "ipa": "/ɡet ˈʌp/",
+  "say": "guet áp",
+  "es": "levantarse",
+  "def": "Salir de la cama o ponerse de pie.",
+  "ex": "She gets up early to go running.",
+  "exEs": "Ella se levanta temprano para salir a correr.",
+  "lvl": "A1"
+ },
+ {
+  "v": "look for",
+  "ipa": "/ˈlʊk fɔːr/",
+  "say": "luk for",
+  "es": "buscar",
+  "def": "Intentar encontrar algo o a alguien.",
+  "ex": "I'm looking for my keys. Have you seen them?",
+  "exEs": "Estoy buscando mis llaves. ¿Las has visto?",
+  "lvl": "A1"
+ },
+ {
+  "v": "turn on",
+  "ipa": "/tɜːrn ˈɒn/",
+  "say": "tern on",
+  "es": "encender",
+  "def": "Hacer que un aparato empiece a funcionar.",
+  "ex": "Can you turn on the lights, please?",
+  "exEs": "¿Puedes encender las luces, por favor?",
+  "lvl": "A1"
+ },
+ {
+  "v": "turn off",
+  "ipa": "/tɜːrn ˈɒf/",
+  "say": "tern of",
+  "es": "apagar",
+  "def": "Hacer que un aparato deje de funcionar.",
+  "ex": "Don't forget to turn off the oven.",
+  "exEs": "No te olvides de apagar el horno.",
+  "lvl": "A1"
+ },
+ {
+  "v": "put on",
+  "ipa": "/pʊt ˈɒn/",
+  "say": "put on",
+  "es": "ponerse (ropa)",
+  "def": "Vestirse con una prenda.",
+  "ex": "Put on your coat, it's freezing outside.",
+  "exEs": "Ponte el abrigo, hace un frío que pela fuera.",
+  "lvl": "A1"
+ },
+ {
+  "v": "take off",
+  "ipa": "/teɪk ˈɒf/",
+  "say": "téik of",
+  "es": "quitarse (ropa); despegar",
+  "def": "Quitarse una prenda, o un avión que se eleva.",
+  "ex": "Our plane takes off at nine.",
+  "exEs": "Nuestro avión despega a las nueve.",
+  "lvl": "A2"
+ },
+ {
+  "v": "find out",
+  "ipa": "/faɪnd ˈaʊt/",
+  "say": "fáind áut",
+  "es": "averiguar; enterarse",
+  "def": "Descubrir una información.",
+  "ex": "I found out that she's moving to London.",
+  "exEs": "Me enteré de que se muda a Londres.",
+  "lvl": "A2"
+ },
+ {
+  "v": "look after",
+  "ipa": "/lʊk ˈæftər/",
+  "say": "luk áfter",
+  "es": "cuidar de",
+  "def": "Ocuparse de alguien o algo.",
+  "ex": "Can you look after my cat this weekend?",
+  "exEs": "¿Puedes cuidar de mi gato este fin de semana?",
+  "lvl": "A2"
+ },
+ {
+  "v": "come back",
+  "ipa": "/kʌm ˈbæk/",
+  "say": "kam bak",
+  "es": "volver",
+  "def": "Regresar a un lugar.",
+  "ex": "When are you coming back from Paris?",
+  "exEs": "¿Cuándo vuelves de París?",
+  "lvl": "A1"
+ },
+ {
+  "v": "go out",
+  "ipa": "/ɡoʊ ˈaʊt/",
+  "say": "góu áut",
+  "es": "salir (de fiesta, a divertirse)",
+  "def": "Salir de casa para socializar.",
+  "ex": "We're going out for dinner tonight.",
+  "exEs": "Esta noche salimos a cenar.",
+  "lvl": "A1"
+ },
+ {
+  "v": "sit down",
+  "ipa": "/sɪt ˈdaʊn/",
+  "say": "sit dáun",
+  "es": "sentarse",
+  "def": "Ponerse en una silla o asiento.",
+  "ex": "Please sit down and make yourself at home.",
+  "exEs": "Siéntate, por favor, y ponte cómodo.",
+  "lvl": "A1"
+ },
+ {
+  "v": "stand up",
+  "ipa": "/stænd ˈʌp/",
+  "say": "stand áp",
+  "es": "levantarse; ponerse de pie",
+  "def": "Pasar de estar sentado a estar de pie.",
+  "ex": "Everyone stood up when the judge came in.",
+  "exEs": "Todos se pusieron de pie cuando entró el juez.",
+  "lvl": "A1"
+ },
+ {
+  "v": "pick up",
+  "ipa": "/pɪk ˈʌp/",
+  "say": "pik áp",
+  "es": "recoger; aprender sin esfuerzo",
+  "def": "Levantar algo, ir a buscar a alguien, o aprender algo de forma natural.",
+  "ex": "I'll pick you up at the station at six.",
+  "exEs": "Te recojo en la estación a las seis.",
+  "lvl": "A2"
+ },
+ {
+  "v": "call back",
+  "ipa": "/kɔːl ˈbæk/",
+  "say": "kol bak",
+  "es": "devolver la llamada",
+  "def": "Llamar a alguien que te ha llamado antes.",
+  "ex": "I'm busy right now, can I call you back later?",
+  "exEs": "Ahora estoy ocupado, ¿te llamo luego?",
+  "lvl": "A2"
+ },
+ {
+  "v": "fill in",
+  "ipa": "/fɪl ˈɪn/",
+  "say": "fil in",
+  "es": "rellenar (un formulario)",
+  "def": "Completar los huecos de un documento.",
+  "ex": "Please fill in this form with your details.",
+  "exEs": "Por favor, rellena este formulario con tus datos.",
+  "lvl": "A2"
+ },
+ {
+  "v": "throw away",
+  "ipa": "/θroʊ əˈweɪ/",
+  "say": "zróu euéi",
+  "es": "tirar (a la basura)",
+  "def": "Deshacerse de algo que ya no quieres.",
+  "ex": "Don't throw away that box, I need it.",
+  "exEs": "No tires esa caja, la necesito.",
+  "lvl": "A2"
+ },
+ {
+  "v": "grow up",
+  "ipa": "/ɡroʊ ˈʌp/",
+  "say": "gróu áp",
+  "es": "crecer; criarse",
+  "def": "Pasar de niño a adulto.",
+  "ex": "I grew up in a small village near the sea.",
+  "exEs": "Me crié en un pueblo pequeño cerca del mar.",
+  "lvl": "A2"
+ },
+ {
+  "v": "look up",
+  "ipa": "/lʊk ˈʌp/",
+  "say": "luk áp",
+  "es": "buscar (en un diccionario o internet)",
+  "def": "Buscar una información en una fuente.",
+  "ex": "If you don't know a word, look it up.",
+  "exEs": "Si no sabes una palabra, búscala.",
+  "lvl": "A2"
+ },
+ {
+  "v": "run out of",
+  "ipa": "/rʌn ˈaʊt əv/",
+  "say": "ran áut ov",
+  "es": "quedarse sin",
+  "def": "Agotar la cantidad que tenías de algo.",
+  "ex": "We've run out of milk, can you buy some?",
+  "exEs": "Nos hemos quedado sin leche, ¿puedes comprar?",
+  "lvl": "B1"
+ },
+ {
+  "v": "get on with",
+  "ipa": "/ɡet ˈɒn wɪð/",
+  "say": "guet on uiz",
+  "es": "llevarse bien con",
+  "def": "Tener buena relación con alguien.",
+  "ex": "I get on really well with my colleagues.",
+  "exEs": "Me llevo muy bien con mis compañeros.",
+  "lvl": "B1"
+ },
+ {
+  "v": "look forward to",
+  "ipa": "/lʊk ˈfɔːrwərd tə/",
+  "say": "luk fóruard tu",
+  "es": "tener ganas de; esperar con ilusión",
+  "def": "Estar ilusionado por algo que va a pasar.",
+  "ex": "I'm really looking forward to the holidays.",
+  "exEs": "Tengo muchísimas ganas de que lleguen las vacaciones.",
+  "lvl": "B1"
+ },
+ {
+  "v": "carry on",
+  "ipa": "/ˈkæri ˈɒn/",
+  "say": "kéri on",
+  "es": "continuar; seguir",
+  "def": "Seguir haciendo algo.",
+  "ex": "Carry on, I didn't mean to interrupt you.",
+  "exEs": "Sigue, no quería interrumpirte.",
+  "lvl": "B1"
+ },
+ {
+  "v": "set up",
+  "ipa": "/set ˈʌp/",
+  "say": "set áp",
+  "es": "montar; establecer; configurar",
+  "def": "Crear o preparar algo para que funcione.",
+  "ex": "She set up her own company at 25.",
+  "exEs": "Ella montó su propia empresa con 25 años.",
+  "lvl": "B1"
+ },
+ {
+  "v": "break down",
+  "ipa": "/breɪk ˈdaʊn/",
+  "say": "bréik dáun",
+  "es": "averiarse; venirse abajo",
+  "def": "Dejar de funcionar una máquina, o perder el control emocional.",
+  "ex": "My car broke down on the motorway.",
+  "exEs": "Se me averió el coche en la autopista.",
+  "lvl": "B1"
+ },
+ {
+  "v": "work out",
+  "ipa": "/wɜːrk ˈaʊt/",
+  "say": "uérk áut",
+  "es": "hacer ejercicio; resolver; salir bien",
+  "def": "Entrenar, encontrar la solución a algo o tener éxito.",
+  "ex": "I work out at the gym three times a week.",
+  "exEs": "Entreno en el gimnasio tres veces por semana.",
+  "lvl": "B1"
+ },
+ {
+  "v": "figure out",
+  "ipa": "/ˈfɪɡjər ˈaʊt/",
+  "say": "fíguier áut",
+  "es": "entender; descifrar",
+  "def": "Llegar a comprender algo tras pensarlo.",
+  "ex": "I can't figure out how this app works.",
+  "exEs": "No consigo entender cómo funciona esta app.",
+  "lvl": "B1"
+ },
+ {
+  "v": "turn down",
+  "ipa": "/tɜːrn ˈdaʊn/",
+  "say": "tern dáun",
+  "es": "rechazar; bajar (el volumen)",
+  "def": "Decir que no a una oferta, o reducir la intensidad.",
+  "ex": "He turned down the job offer.",
+  "exEs": "Rechazó la oferta de trabajo.",
+  "lvl": "B1"
+ },
+ {
+  "v": "turn up",
+  "ipa": "/tɜːrn ˈʌp/",
+  "say": "tern áp",
+  "es": "aparecer; subir (el volumen)",
+  "def": "Presentarse en un sitio, a menudo sin avisar.",
+  "ex": "He turned up an hour late.",
+  "exEs": "Apareció con una hora de retraso.",
+  "lvl": "B1"
+ },
+ {
+  "v": "put off",
+  "ipa": "/pʊt ˈɒf/",
+  "say": "put of",
+  "es": "posponer; quitar las ganas",
+  "def": "Aplazar algo, o hacer que algo deje de apetecer.",
+  "ex": "Stop putting off your homework!",
+  "exEs": "¡Deja de posponer los deberes!",
+  "lvl": "B1"
+ },
+ {
+  "v": "bring up",
+  "ipa": "/brɪŋ ˈʌp/",
+  "say": "bring áp",
+  "es": "sacar (un tema); criar",
+  "def": "Mencionar un asunto, o educar a un niño.",
+  "ex": "Don't bring up politics at dinner.",
+  "exEs": "No saques el tema de la política en la cena.",
+  "lvl": "B1"
+ },
+ {
+  "v": "come up with",
+  "ipa": "/kʌm ˈʌp wɪð/",
+  "say": "kam áp uiz",
+  "es": "ocurrirse; idear",
+  "def": "Pensar en una idea o solución.",
+  "ex": "She came up with a brilliant plan.",
+  "exEs": "Se le ocurrió un plan genial.",
+  "lvl": "B1"
+ },
+ {
+  "v": "get over",
+  "ipa": "/ɡet ˈoʊvər/",
+  "say": "guet óuver",
+  "es": "superar; recuperarse de",
+  "def": "Recuperarse de una enfermedad o una mala experiencia.",
+  "ex": "It took him months to get over the breakup.",
+  "exEs": "Tardó meses en superar la ruptura.",
+  "lvl": "B1"
+ },
+ {
+  "v": "look into",
+  "ipa": "/lʊk ˈɪntuː/",
+  "say": "luk íntu",
+  "es": "investigar; estudiar",
+  "def": "Examinar un asunto para entenderlo.",
+  "ex": "The police are looking into the case.",
+  "exEs": "La policía está investigando el caso.",
+  "lvl": "B1"
+ },
+ {
+  "v": "make up",
+  "ipa": "/meɪk ˈʌp/",
+  "say": "méik áp",
+  "es": "inventarse; hacer las paces",
+  "def": "Crear una historia falsa, o reconciliarse.",
+  "ex": "Did you make up that story?",
+  "exEs": "¿Te has inventado esa historia?",
+  "lvl": "B1"
+ },
+ {
+  "v": "hang out",
+  "ipa": "/hæŋ ˈaʊt/",
+  "say": "jang áut",
+  "es": "pasar el rato",
+  "def": "Pasar tiempo con amigos sin hacer nada especial.",
+  "ex": "We used to hang out at the park after school.",
+  "exEs": "Solíamos pasar el rato en el parque después del cole.",
+  "lvl": "A2"
+ },
+ {
+  "v": "show up",
+  "ipa": "/ʃoʊ ˈʌp/",
+  "say": "shóu áp",
+  "es": "presentarse; aparecer",
+  "def": "Llegar a un sitio donde te esperan.",
+  "ex": "Only five people showed up to the meeting.",
+  "exEs": "Solo se presentaron cinco personas a la reunión.",
+  "lvl": "B1"
+ },
+ {
+  "v": "calm down",
+  "ipa": "/kɑːm ˈdaʊn/",
+  "say": "kaam dáun",
+  "es": "calmarse",
+  "def": "Tranquilizarse tras estar nervioso o enfadado.",
+  "ex": "Calm down, it's not a big deal.",
+  "exEs": "Cálmate, no es para tanto.",
+  "lvl": "A2"
+ },
+ {
+  "v": "cheer up",
+  "ipa": "/tʃɪr ˈʌp/",
+  "say": "chíer áp",
+  "es": "animar(se)",
+  "def": "Ponerse más contento o alegrar a alguien.",
+  "ex": "Cheer up! Tomorrow is another day.",
+  "exEs": "¡Anímate! Mañana será otro día.",
+  "lvl": "A2"
+ },
+ {
+  "v": "check in",
+  "ipa": "/tʃek ˈɪn/",
+  "say": "chek in",
+  "es": "registrarse (hotel, aeropuerto)",
+  "def": "Presentarse a la llegada para registrarse.",
+  "ex": "We need to check in two hours before the flight.",
+  "exEs": "Tenemos que facturar dos horas antes del vuelo.",
+  "lvl": "A2"
+ },
+ {
+  "v": "check out",
+  "ipa": "/tʃek ˈaʊt/",
+  "say": "chek áut",
+  "es": "dejar el hotel; echar un vistazo",
+  "def": "Pagar y salir de un hotel, o mirar algo interesante.",
+  "ex": "Check out this video, it's hilarious!",
+  "exEs": "Mira este vídeo, ¡es divertidísimo!",
+  "lvl": "A2"
+ },
+ {
+  "v": "eat out",
+  "ipa": "/iːt ˈaʊt/",
+  "say": "iit áut",
+  "es": "comer fuera",
+  "def": "Comer en un restaurante en lugar de en casa.",
+  "ex": "We eat out every Friday.",
+  "exEs": "Comemos fuera todos los viernes.",
+  "lvl": "A2"
+ },
+ {
+  "v": "fall asleep",
+  "ipa": "/fɔːl əˈsliːp/",
+  "say": "fol eslíip",
+  "es": "quedarse dormido",
+  "def": "Empezar a dormir.",
+  "ex": "I fell asleep in the middle of the film.",
+  "exEs": "Me quedé dormido a mitad de la película.",
+  "lvl": "A2"
+ },
+ {
+  "v": "get along",
+  "ipa": "/ɡet əˈlɒŋ/",
+  "say": "guet elóng",
+  "es": "llevarse bien",
+  "def": "Tener una relación amistosa.",
+  "ex": "My sister and I get along really well.",
+  "exEs": "Mi hermana y yo nos llevamos genial.",
+  "lvl": "B1"
+ },
+ {
+  "v": "hurry up",
+  "ipa": "/ˈhʌri ˈʌp/",
+  "say": "jári áp",
+  "es": "darse prisa",
+  "def": "Hacer algo más rápido.",
+  "ex": "Hurry up or we'll miss the train!",
+  "exEs": "¡Date prisa o perderemos el tren!",
+  "lvl": "A1"
+ },
+ {
+  "v": "keep on",
+  "ipa": "/kiːp ˈɒn/",
+  "say": "kiip on",
+  "es": "seguir; no parar de",
+  "def": "Continuar haciendo algo con insistencia.",
+  "ex": "He kept on talking during the whole film.",
+  "exEs": "No paró de hablar durante toda la peli.",
+  "lvl": "B1"
+ },
+ {
+  "v": "let down",
+  "ipa": "/let ˈdaʊn/",
+  "say": "let dáun",
+  "es": "decepcionar; fallar",
+  "def": "No cumplir lo que alguien esperaba de ti.",
+  "ex": "I won't let you down, I promise.",
+  "exEs": "No te fallaré, te lo prometo.",
+  "lvl": "B1"
+ },
+ {
+  "v": "log in",
+  "ipa": "/lɒɡ ˈɪn/",
+  "say": "log in",
+  "es": "iniciar sesión",
+  "def": "Entrar en una cuenta con usuario y contraseña.",
+  "ex": "Log in with your email and password.",
+  "exEs": "Inicia sesión con tu correo y tu contraseña.",
+  "lvl": "A2"
+ },
+ {
+  "v": "log out",
+  "ipa": "/lɒɡ ˈaʊt/",
+  "say": "log áut",
+  "es": "cerrar sesión",
+  "def": "Salir de una cuenta en un dispositivo o web.",
+  "ex": "Remember to log out on shared computers.",
+  "exEs": "Acuérdate de cerrar sesión en ordenadores compartidos.",
+  "lvl": "A2"
+ },
+ {
+  "v": "look out",
+  "ipa": "/lʊk ˈaʊt/",
+  "say": "luk áut",
+  "es": "¡cuidado!; estar atento",
+  "def": "Prestar atención a un peligro.",
+  "ex": "Look out! There's a car coming.",
+  "exEs": "¡Cuidado! Viene un coche.",
+  "lvl": "A2"
+ },
+ {
+  "v": "pay back",
+  "ipa": "/peɪ ˈbæk/",
+  "say": "péi bak",
+  "es": "devolver (dinero)",
+  "def": "Devolver el dinero que te han prestado.",
+  "ex": "I'll pay you back next week.",
+  "exEs": "Te devuelvo el dinero la semana que viene.",
+  "lvl": "A2"
+ },
+ {
+  "v": "put away",
+  "ipa": "/pʊt əˈweɪ/",
+  "say": "put euéi",
+  "es": "guardar; recoger",
+  "def": "Colocar algo en su sitio.",
+  "ex": "Put away your toys before dinner.",
+  "exEs": "Recoge tus juguetes antes de cenar.",
+  "lvl": "A2"
+ },
+ {
+  "v": "run away",
+  "ipa": "/rʌn əˈweɪ/",
+  "say": "ran euéi",
+  "es": "huir; escaparse",
+  "def": "Irse rápidamente de un lugar para escapar.",
+  "ex": "The dog ran away when it heard the fireworks.",
+  "exEs": "El perro se escapó cuando oyó los fuegos artificiales.",
+  "lvl": "A2"
+ },
+ {
+  "v": "slow down",
+  "ipa": "/sloʊ ˈdaʊn/",
+  "say": "slóu dáun",
+  "es": "ir más despacio",
+  "def": "Reducir la velocidad o el ritmo.",
+  "ex": "Slow down, you're driving too fast!",
+  "exEs": "¡Frena un poco, vas demasiado rápido!",
+  "lvl": "A2"
+ },
+ {
+  "v": "take care of",
+  "ipa": "/teɪk ˈker əv/",
+  "say": "téik ker ov",
+  "es": "cuidar de; encargarse de",
+  "def": "Ocuparse de alguien o de una tarea.",
+  "ex": "Don't worry, I'll take care of it.",
+  "exEs": "No te preocupes, yo me encargo.",
+  "lvl": "A2"
+ },
+ {
+  "v": "try on",
+  "ipa": "/traɪ ˈɒn/",
+  "say": "trái on",
+  "es": "probarse (ropa)",
+  "def": "Ponerse una prenda para ver cómo queda.",
+  "ex": "Can I try on these jeans?",
+  "exEs": "¿Me puedo probar estos vaqueros?",
+  "lvl": "A2"
+ },
+ {
+  "v": "write down",
+  "ipa": "/raɪt ˈdaʊn/",
+  "say": "ráit dáun",
+  "es": "apuntar; anotar",
+  "def": "Escribir algo para no olvidarlo.",
+  "ex": "Write down my number before you forget.",
+  "exEs": "Apunta mi número antes de que se te olvide.",
+  "lvl": "A2"
+ },
+ {
+  "v": "belong to",
+  "ipa": "/bɪˈlɒŋ tə/",
+  "say": "bilóng tu",
+  "es": "pertenecer a",
+  "def": "Ser propiedad de alguien.",
+  "ex": "Does this bag belong to you?",
+  "exEs": "¿Este bolso es tuyo?",
+  "lvl": "A2"
+ },
+ {
+  "v": "blow up",
+  "ipa": "/bloʊ ˈʌp/",
+  "say": "blóu áp",
+  "es": "explotar; inflar; enfadarse mucho",
+  "def": "Estallar, llenar de aire o perder los nervios.",
+  "ex": "He blew up when he saw the bill.",
+  "exEs": "Se puso hecho una furia cuando vio la factura.",
+  "lvl": "B1"
+ },
+ {
+  "v": "break up",
+  "ipa": "/breɪk ˈʌp/",
+  "say": "bréik áp",
+  "es": "romper (una relación)",
+  "def": "Terminar una relación sentimental.",
+  "ex": "They broke up after five years together.",
+  "exEs": "Rompieron después de cinco años juntos.",
+  "lvl": "B1"
+ },
+ {
+  "v": "break into",
+  "ipa": "/breɪk ˈɪntuː/",
+  "say": "bréik íntu",
+  "es": "entrar a robar",
+  "def": "Entrar a la fuerza en un edificio o coche.",
+  "ex": "Someone broke into our car last night.",
+  "exEs": "Anoche alguien nos forzó el coche.",
+  "lvl": "B1"
+ },
+ {
+  "v": "bring back",
+  "ipa": "/brɪŋ ˈbæk/",
+  "say": "bring bak",
+  "es": "devolver; traer recuerdos",
+  "def": "Devolver algo, o hacer recordar el pasado.",
+  "ex": "This song brings back so many memories.",
+  "exEs": "Esta canción me trae muchísimos recuerdos.",
+  "lvl": "B1"
+ },
+ {
+  "v": "call off",
+  "ipa": "/kɔːl ˈɒf/",
+  "say": "kol of",
+  "es": "cancelar; suspender",
+  "def": "Anular un evento planeado.",
+  "ex": "The match was called off because of the rain.",
+  "exEs": "Suspendieron el partido por la lluvia.",
+  "lvl": "B1"
+ },
+ {
+  "v": "catch up",
+  "ipa": "/kætʃ ˈʌp/",
+  "say": "kach áp",
+  "es": "ponerse al día; alcanzar",
+  "def": "Recuperar el tiempo perdido o llegar al nivel de otros.",
+  "ex": "Let's meet for coffee and catch up.",
+  "exEs": "Quedemos para un café y nos ponemos al día.",
+  "lvl": "B1"
+ },
+ {
+  "v": "count on",
+  "ipa": "/kaʊnt ˈɒn/",
+  "say": "káunt on",
+  "es": "contar con",
+  "def": "Confiar en que alguien te ayudará.",
+  "ex": "You can always count on me.",
+  "exEs": "Siempre puedes contar conmigo.",
+  "lvl": "B1"
+ },
+ {
+  "v": "cut down on",
+  "ipa": "/kʌt ˈdaʊn ɒn/",
+  "say": "kat dáun on",
+  "es": "reducir (el consumo de)",
+  "def": "Consumir menos cantidad de algo.",
+  "ex": "I'm trying to cut down on sugar.",
+  "exEs": "Estoy intentando tomar menos azúcar.",
+  "lvl": "B1"
+ },
+ {
+  "v": "deal with",
+  "ipa": "/ˈdiːl wɪð/",
+  "say": "diil uiz",
+  "es": "ocuparse de; lidiar con",
+  "def": "Afrontar un problema o una persona.",
+  "ex": "I'll deal with the problem tomorrow.",
+  "exEs": "Mañana me ocupo del problema.",
+  "lvl": "B1"
+ },
+ {
+  "v": "drop by",
+  "ipa": "/drɒp ˈbaɪ/",
+  "say": "drop bái",
+  "es": "pasarse (por un sitio)",
+  "def": "Visitar a alguien brevemente y sin planearlo.",
+  "ex": "Drop by whenever you want!",
+  "exEs": "¡Pásate cuando quieras!",
+  "lvl": "B1"
+ },
+ {
+  "v": "drop out",
+  "ipa": "/drɒp ˈaʊt/",
+  "say": "drop áut",
+  "es": "abandonar (los estudios)",
+  "def": "Dejar un curso o competición antes de terminar.",
+  "ex": "He dropped out of university to start a business.",
+  "exEs": "Dejó la universidad para montar un negocio.",
+  "lvl": "B1"
+ },
+ {
+  "v": "end up",
+  "ipa": "/end ˈʌp/",
+  "say": "end áp",
+  "es": "acabar (en una situación)",
+  "def": "Llegar a un lugar o situación sin planearlo.",
+  "ex": "We got lost and ended up in a tiny village.",
+  "exEs": "Nos perdimos y acabamos en un pueblo diminuto.",
+  "lvl": "B1"
+ },
+ {
+  "v": "fall out",
+  "ipa": "/fɔːl ˈaʊt/",
+  "say": "fol áut",
+  "es": "pelearse; enfadarse con alguien",
+  "def": "Discutir y dejar de hablarse.",
+  "ex": "They fell out over money.",
+  "exEs": "Se pelearon por dinero.",
+  "lvl": "B1"
+ },
+ {
+  "v": "get by",
+  "ipa": "/ɡet ˈbaɪ/",
+  "say": "guet bái",
+  "es": "apañárselas; arreglárselas",
+  "def": "Tener lo justo para sobrevivir o defenderse.",
+  "ex": "My English isn't perfect, but I get by.",
+  "exEs": "Mi inglés no es perfecto, pero me defiendo.",
+  "lvl": "B1"
+ },
+ {
+  "v": "get rid of",
+  "ipa": "/ɡet ˈrɪd əv/",
+  "say": "guet rid ov",
+  "es": "deshacerse de",
+  "def": "Eliminar algo que no quieres.",
+  "ex": "I need to get rid of all these old clothes.",
+  "exEs": "Tengo que deshacerme de toda esta ropa vieja.",
+  "lvl": "B1"
+ },
+ {
+  "v": "give back",
+  "ipa": "/ɡɪv ˈbæk/",
+  "say": "guiv bak",
+  "es": "devolver",
+  "def": "Devolver algo a su dueño.",
+  "ex": "Give me back my phone!",
+  "exEs": "¡Devuélveme el móvil!",
+  "lvl": "A2"
+ },
+ {
+  "v": "go on",
+  "ipa": "/ɡoʊ ˈɒn/",
+  "say": "góu on",
+  "es": "continuar; pasar (ocurrir)",
+  "def": "Seguir, o suceder algo.",
+  "ex": "What's going on here?",
+  "exEs": "¿Qué está pasando aquí?",
+  "lvl": "A2"
+ },
+ {
+  "v": "hold on",
+  "ipa": "/hoʊld ˈɒn/",
+  "say": "jóuld on",
+  "es": "esperar un momento; agarrarse",
+  "def": "Esperar un poco, o sujetarse fuerte.",
+  "ex": "Hold on, I'll be right back.",
+  "exEs": "Espera un momento, ahora vuelvo.",
+  "lvl": "A2"
+ },
+ {
+  "v": "join in",
+  "ipa": "/dʒɔɪn ˈɪn/",
+  "say": "yóin in",
+  "es": "unirse; participar",
+  "def": "Participar en una actividad con otros.",
+  "ex": "Everyone joined in the singing.",
+  "exEs": "Todos se unieron a cantar.",
+  "lvl": "B1"
+ },
+ {
+  "v": "keep up with",
+  "ipa": "/kiːp ˈʌp wɪð/",
+  "say": "kiip áp uiz",
+  "es": "seguir el ritmo de; estar al día",
+  "def": "Mantener el mismo nivel o velocidad que otros.",
+  "ex": "It's hard to keep up with all the new technology.",
+  "exEs": "Cuesta estar al día con toda la tecnología nueva.",
+  "lvl": "B1"
+ },
+ {
+  "v": "leave out",
+  "ipa": "/liːv ˈaʊt/",
+  "say": "liiv áut",
+  "es": "omitir; dejar fuera",
+  "def": "No incluir algo o a alguien.",
+  "ex": "Don't leave out any details.",
+  "exEs": "No te dejes ningún detalle.",
+  "lvl": "B1"
+ },
+ {
+  "v": "look down on",
+  "ipa": "/lʊk ˈdaʊn ɒn/",
+  "say": "luk dáun on",
+  "es": "menospreciar",
+  "def": "Considerar a alguien inferior.",
+  "ex": "She looks down on people who don't speak English.",
+  "exEs": "Ella menosprecia a la gente que no habla inglés.",
+  "lvl": "B2"
+ },
+ {
+  "v": "look up to",
+  "ipa": "/lʊk ˈʌp tə/",
+  "say": "luk áp tu",
+  "es": "admirar",
+  "def": "Respetar y tomar a alguien como modelo.",
+  "ex": "I've always looked up to my grandmother.",
+  "exEs": "Siempre he admirado a mi abuela.",
+  "lvl": "B1"
+ },
+ {
+  "v": "make out",
+  "ipa": "/meɪk ˈaʊt/",
+  "say": "méik áut",
+  "es": "distinguir; entender; besarse",
+  "def": "Conseguir ver u oír algo con dificultad.",
+  "ex": "I couldn't make out what he was saying.",
+  "exEs": "No conseguía entender lo que decía.",
+  "lvl": "B2"
+ },
+ {
+  "v": "mix up",
+  "ipa": "/mɪks ˈʌp/",
+  "say": "miks áp",
+  "es": "confundir; mezclar",
+  "def": "Confundir una cosa o persona con otra.",
+  "ex": "I always mix up the twins.",
+  "exEs": "Siempre confundo a los gemelos.",
+  "lvl": "B1"
+ },
+ {
+  "v": "move in",
+  "ipa": "/muːv ˈɪn/",
+  "say": "muuv in",
+  "es": "mudarse (a una casa)",
+  "def": "Empezar a vivir en un sitio nuevo.",
+  "ex": "We're moving in next month.",
+  "exEs": "Nos mudamos el mes que viene.",
+  "lvl": "A2"
+ },
+ {
+  "v": "move out",
+  "ipa": "/muːv ˈaʊt/",
+  "say": "muuv áut",
+  "es": "irse (de una casa)",
+  "def": "Dejar de vivir en un sitio.",
+  "ex": "I moved out of my parents' house at 22.",
+  "exEs": "Me fui de casa de mis padres a los 22.",
+  "lvl": "A2"
+ },
+ {
+  "v": "pass away",
+  "ipa": "/pæs əˈweɪ/",
+  "say": "pas euéi",
+  "es": "fallecer",
+  "def": "Forma suave de decir que alguien ha muerto.",
+  "ex": "His grandfather passed away last year.",
+  "exEs": "Su abuelo falleció el año pasado.",
+  "lvl": "B1"
+ },
+ {
+  "v": "pass out",
+  "ipa": "/pæs ˈaʊt/",
+  "say": "pas áut",
+  "es": "desmayarse",
+  "def": "Perder el conocimiento.",
+  "ex": "It was so hot that she nearly passed out.",
+  "exEs": "Hacía tanto calor que casi se desmaya.",
+  "lvl": "B1"
+ },
+ {
+  "v": "point out",
+  "ipa": "/pɔɪnt ˈaʊt/",
+  "say": "póint áut",
+  "es": "señalar; hacer notar",
+  "def": "Llamar la atención sobre un hecho.",
+  "ex": "She pointed out a mistake in my report.",
+  "exEs": "Me señaló un error en el informe.",
+  "lvl": "B1"
+ },
+ {
+  "v": "put up with",
+  "ipa": "/pʊt ˈʌp wɪð/",
+  "say": "put áp uiz",
+  "es": "aguantar; soportar",
+  "def": "Tolerar algo molesto.",
+  "ex": "I can't put up with this noise any longer.",
+  "exEs": "No aguanto más este ruido.",
+  "lvl": "B1"
+ },
+ {
+  "v": "run into",
+  "ipa": "/rʌn ˈɪntuː/",
+  "say": "ran íntu",
+  "es": "encontrarse con (por casualidad)",
+  "def": "Ver a alguien sin esperarlo.",
+  "ex": "I ran into an old friend at the supermarket.",
+  "exEs": "Me encontré con un viejo amigo en el súper.",
+  "lvl": "B1"
+ },
+ {
+  "v": "see off",
+  "ipa": "/siː ˈɒf/",
+  "say": "sii of",
+  "es": "despedir (a alguien que se va)",
+  "def": "Ir al aeropuerto o estación para decir adiós.",
+  "ex": "My parents saw me off at the airport.",
+  "exEs": "Mis padres me despidieron en el aeropuerto.",
+  "lvl": "B1"
+ },
+ {
+  "v": "sort out",
+  "ipa": "/sɔːrt ˈaʊt/",
+  "say": "sort áut",
+  "es": "solucionar; organizar",
+  "def": "Arreglar un problema o poner orden.",
+  "ex": "Don't worry, we'll sort it out.",
+  "exEs": "Tranquilo, lo solucionaremos.",
+  "lvl": "B1"
+ },
+ {
+  "v": "take after",
+  "ipa": "/teɪk ˈæftər/",
+  "say": "téik áfter",
+  "es": "parecerse a (un familiar)",
+  "def": "Tener rasgos de un padre o pariente.",
+  "ex": "She really takes after her mother.",
+  "exEs": "Se parece muchísimo a su madre.",
+  "lvl": "B1"
+ },
+ {
+  "v": "take up",
+  "ipa": "/teɪk ˈʌp/",
+  "say": "téik áp",
+  "es": "empezar (un hobby); ocupar",
+  "def": "Empezar una actividad nueva, o ocupar espacio o tiempo.",
+  "ex": "I've taken up yoga this year.",
+  "exEs": "Este año he empezado yoga.",
+  "lvl": "B1"
+ },
+ {
+  "v": "tell off",
+  "ipa": "/tel ˈɒf/",
+  "say": "tel of",
+  "es": "regañar; echar la bronca",
+  "def": "Reñir a alguien por algo que ha hecho mal.",
+  "ex": "The teacher told us off for being late.",
+  "exEs": "El profe nos echó la bronca por llegar tarde.",
+  "lvl": "B1"
+ },
+ {
+  "v": "think over",
+  "ipa": "/θɪŋk ˈoʊvər/",
+  "say": "zink óuver",
+  "es": "pensarse (algo)",
+  "def": "Considerar algo con calma antes de decidir.",
+  "ex": "Think it over and let me know tomorrow.",
+  "exEs": "Piénsatelo y me dices mañana.",
+  "lvl": "B1"
+ },
+ {
+  "v": "try out",
+  "ipa": "/traɪ ˈaʊt/",
+  "say": "trái áut",
+  "es": "probar",
+  "def": "Usar algo para ver si funciona o te gusta.",
+  "ex": "I want to try out the new restaurant.",
+  "exEs": "Quiero probar el restaurante nuevo.",
+  "lvl": "B1"
+ },
+ {
+  "v": "warm up",
+  "ipa": "/wɔːrm ˈʌp/",
+  "say": "uorm áp",
+  "es": "calentar (ejercicio, comida)",
+  "def": "Prepararse para hacer deporte, o calentar algo.",
+  "ex": "Always warm up before running.",
+  "exEs": "Calienta siempre antes de correr.",
+  "lvl": "A2"
+ },
+ {
+  "v": "back up",
+  "ipa": "/bæk ˈʌp/",
+  "say": "bak áp",
+  "es": "hacer una copia de seguridad; respaldar",
+  "def": "Guardar una copia de archivos, o apoyar a alguien.",
+  "ex": "Always back up your photos to the cloud.",
+  "exEs": "Haz siempre copia de seguridad de tus fotos en la nube.",
+  "lvl": "B1"
+ },
+ {
+  "v": "come across",
+  "ipa": "/kʌm əˈkrɒs/",
+  "say": "kam ekrós",
+  "es": "toparse con; dar una impresión",
+  "def": "Encontrar algo por casualidad, o parecer de cierta manera.",
+  "ex": "I came across an old photo of us.",
+  "exEs": "Me topé con una foto antigua nuestra.",
+  "lvl": "B1"
+ },
+ {
+  "v": "come in",
+  "ipa": "/kʌm ˈɪn/",
+  "say": "kam in",
+  "es": "entrar; pasar",
+  "def": "Entrar en un lugar.",
+  "ex": "Come in and have a seat.",
+  "exEs": "Pasa y siéntate.",
+  "lvl": "A1"
+ },
+ {
+  "v": "come on",
+  "ipa": "/kʌm ˈɒn/",
+  "say": "kam on",
+  "es": "¡vamos!; ¡venga!",
+  "def": "Expresión para animar o meter prisa.",
+  "ex": "Come on, you can do it!",
+  "exEs": "¡Venga, tú puedes!",
+  "lvl": "A1"
+ },
+ {
+  "v": "do without",
+  "ipa": "/duː wɪˈðaʊt/",
+  "say": "du uizáut",
+  "es": "prescindir de; arreglárselas sin",
+  "def": "Vivir sin algo que normalmente tienes.",
+  "ex": "I can't do without my morning coffee.",
+  "exEs": "No puedo vivir sin mi café de la mañana.",
+  "lvl": "B2"
+ },
+ {
+  "v": "dress up",
+  "ipa": "/dres ˈʌp/",
+  "say": "dres áp",
+  "es": "disfrazarse; arreglarse",
+  "def": "Ponerse ropa elegante o un disfraz.",
+  "ex": "We dressed up as zombies for Halloween.",
+  "exEs": "Nos disfrazamos de zombis en Halloween.",
+  "lvl": "A2"
+ },
+ {
+  "v": "fall behind",
+  "ipa": "/fɔːl bɪˈhaɪnd/",
+  "say": "fol bijáind",
+  "es": "quedarse atrás; retrasarse",
+  "def": "No ir al mismo ritmo que los demás.",
+  "ex": "If you miss classes, you'll fall behind.",
+  "exEs": "Si faltas a clase, te quedarás atrás.",
+  "lvl": "B1"
+ },
+ {
+  "v": "fall for",
+  "ipa": "/ˈfɔːl fɔːr/",
+  "say": "fol for",
+  "es": "enamorarse de; tragarse (un engaño)",
+  "def": "Enamorarse, o creerse una mentira.",
+  "ex": "I can't believe you fell for that joke!",
+  "exEs": "¡No me creo que te tragaras esa broma!",
+  "lvl": "B2"
+ },
+ {
+  "v": "get away with",
+  "ipa": "/ɡet əˈweɪ wɪð/",
+  "say": "guet euéi uiz",
+  "es": "salirse con la suya",
+  "def": "Hacer algo malo sin ser castigado.",
+  "ex": "He thinks he can get away with anything.",
+  "exEs": "Se cree que puede salirse con la suya en todo.",
+  "lvl": "B2"
+ },
+ {
+  "v": "get back",
+  "ipa": "/ɡet ˈbæk/",
+  "say": "guet bak",
+  "es": "volver; recuperar",
+  "def": "Regresar a un sitio o recuperar algo.",
+  "ex": "When did you get back from holiday?",
+  "exEs": "¿Cuándo volviste de vacaciones?",
+  "lvl": "A2"
+ },
+ {
+  "v": "get in",
+  "ipa": "/ɡet ˈɪn/",
+  "say": "guet in",
+  "es": "entrar; subir (a un coche)",
+  "def": "Entrar en un sitio o en un vehículo.",
+  "ex": "Get in the car, we're late!",
+  "exEs": "¡Sube al coche, que llegamos tarde!",
+  "lvl": "A2"
+ },
+ {
+  "v": "get off",
+  "ipa": "/ɡet ˈɒf/",
+  "say": "guet of",
+  "es": "bajarse (de un transporte)",
+  "def": "Salir de un bus, tren o avión.",
+  "ex": "Get off at the next stop.",
+  "exEs": "Bájate en la próxima parada.",
+  "lvl": "A2"
+ },
+ {
+  "v": "get on",
+  "ipa": "/ɡet ˈɒn/",
+  "say": "guet on",
+  "es": "subirse (a un transporte)",
+  "def": "Entrar en un bus, tren o avión.",
+  "ex": "We got on the wrong train!",
+  "exEs": "¡Nos subimos al tren equivocado!",
+  "lvl": "A2"
+ },
+ {
+  "v": "get through",
+  "ipa": "/ɡet ˈθruː/",
+  "say": "guet zruu",
+  "es": "superar; pasar (un mal momento); contactar",
+  "def": "Sobrevivir a una situación difícil, o conseguir hablar por teléfono.",
+  "ex": "We'll get through this together.",
+  "exEs": "Saldremos de esta juntos.",
+  "lvl": "B2"
+ },
+ {
+  "v": "give in",
+  "ipa": "/ɡɪv ˈɪn/",
+  "say": "guiv in",
+  "es": "ceder; rendirse",
+  "def": "Aceptar algo tras resistirse.",
+  "ex": "My parents finally gave in and bought me a dog.",
+  "exEs": "Mis padres al final cedieron y me compraron un perro.",
+  "lvl": "B1"
+ },
+ {
+  "v": "go ahead",
+  "ipa": "/ɡoʊ əˈhed/",
+  "say": "góu ejéd",
+  "es": "adelante; seguir adelante",
+  "def": "Dar permiso o empezar a hacer algo.",
+  "ex": "\"Can I ask a question?\" \"Sure, go ahead.\"",
+  "exEs": "\"¿Puedo preguntar algo?\" \"Claro, adelante.\"",
+  "lvl": "A2"
+ },
+ {
+  "v": "go off",
+  "ipa": "/ɡoʊ ˈɒf/",
+  "say": "góu of",
+  "es": "sonar (alarma); estropearse (comida); explotar",
+  "def": "Una alarma que suena, comida que se pone mala, o una bomba que estalla.",
+  "ex": "My alarm didn't go off this morning.",
+  "exEs": "Esta mañana no me sonó la alarma.",
+  "lvl": "B1"
+ },
+ {
+  "v": "go over",
+  "ipa": "/ɡoʊ ˈoʊvər/",
+  "say": "góu óuver",
+  "es": "repasar; revisar",
+  "def": "Examinar algo con atención.",
+  "ex": "Let's go over the plan one more time.",
+  "exEs": "Repasemos el plan una vez más.",
+  "lvl": "B1"
+ },
+ {
+  "v": "go through",
+  "ipa": "/ɡoʊ ˈθruː/",
+  "say": "góu zruu",
+  "es": "pasar por; revisar",
+  "def": "Vivir una experiencia difícil, o examinar algo a fondo.",
+  "ex": "She's going through a tough time.",
+  "exEs": "Está pasando por un mal momento.",
+  "lvl": "B1"
+ },
+ {
+  "v": "grow out of",
+  "ipa": "/ɡroʊ ˈaʊt əv/",
+  "say": "gróu áut ov",
+  "es": "quedarse pequeño; superar (con la edad)",
+  "def": "Hacerse demasiado grande para algo, o dejar un hábito al crecer.",
+  "ex": "Kids grow out of their shoes so fast.",
+  "exEs": "A los niños se les quedan pequeños los zapatos rapidísimo.",
+  "lvl": "B2"
+ },
+ {
+  "v": "hand in",
+  "ipa": "/hænd ˈɪn/",
+  "say": "jand in",
+  "es": "entregar",
+  "def": "Dar un trabajo o documento a quien corresponde.",
+  "ex": "Hand in your essays by Friday.",
+  "exEs": "Entregad las redacciones antes del viernes.",
+  "lvl": "B1"
+ },
+ {
+  "v": "hang up",
+  "ipa": "/hæŋ ˈʌp/",
+  "say": "jang áp",
+  "es": "colgar (el teléfono)",
+  "def": "Terminar una llamada.",
+  "ex": "Don't hang up, I haven't finished!",
+  "exEs": "¡No cuelgues, que no he terminado!",
+  "lvl": "A2"
+ },
+ {
+  "v": "hold up",
+  "ipa": "/hoʊld ˈʌp/",
+  "say": "jóuld áp",
+  "es": "retrasar; atracar",
+  "def": "Causar un retraso, o robar con amenazas.",
+  "ex": "Sorry I'm late, I was held up in traffic.",
+  "exEs": "Perdona el retraso, me pilló el tráfico.",
+  "lvl": "B2"
+ },
+ {
+  "v": "kick off",
+  "ipa": "/kɪk ˈɒf/",
+  "say": "kik of",
+  "es": "empezar; dar comienzo",
+  "def": "Comenzar un evento o un partido.",
+  "ex": "The festival kicks off on Friday.",
+  "exEs": "El festival arranca el viernes.",
+  "lvl": "B2"
+ },
+ {
+  "v": "knock out",
+  "ipa": "/nɒk ˈaʊt/",
+  "say": "nok áut",
+  "es": "dejar inconsciente; eliminar",
+  "def": "Dejar KO, o eliminar de una competición.",
+  "ex": "Spain knocked out Germany in the quarter-finals.",
+  "exEs": "España eliminó a Alemania en cuartos.",
+  "lvl": "B2"
+ },
+ {
+  "v": "lay off",
+  "ipa": "/leɪ ˈɒf/",
+  "say": "léi of",
+  "es": "despedir (por falta de trabajo)",
+  "def": "Echar a empleados por motivos económicos.",
+  "ex": "The factory laid off 200 workers.",
+  "exEs": "La fábrica despidió a 200 trabajadores.",
+  "lvl": "B2"
+ },
+ {
+  "v": "let in",
+  "ipa": "/let ˈɪn/",
+  "say": "let in",
+  "es": "dejar entrar",
+  "def": "Permitir que alguien o algo entre.",
+  "ex": "Open the window and let in some fresh air.",
+  "exEs": "Abre la ventana y deja entrar aire fresco.",
+  "lvl": "B1"
+ },
+ {
+  "v": "look around",
+  "ipa": "/lʊk əˈraʊnd/",
+  "say": "luk eráund",
+  "es": "echar un vistazo; mirar alrededor",
+  "def": "Visitar o explorar un lugar.",
+  "ex": "We have an hour to look around the town.",
+  "exEs": "Tenemos una hora para echar un vistazo al pueblo.",
+  "lvl": "A2"
+ },
+ {
+  "v": "make up for",
+  "ipa": "/meɪk ˈʌp fɔːr/",
+  "say": "méik áp for",
+  "es": "compensar",
+  "def": "Hacer algo bueno para equilibrar algo malo.",
+  "ex": "I'll make up for being late, I promise.",
+  "exEs": "Compensaré el retraso, te lo prometo.",
+  "lvl": "B2"
+ },
+ {
+  "v": "miss out",
+  "ipa": "/mɪs ˈaʊt/",
+  "say": "mis áut",
+  "es": "perderse (algo bueno)",
+  "def": "No aprovechar una oportunidad.",
+  "ex": "Come with us, don't miss out!",
+  "exEs": "¡Vente, no te lo pierdas!",
+  "lvl": "B1"
+ },
+ {
+  "v": "nod off",
+  "ipa": "/nɒd ˈɒf/",
+  "say": "nod of",
+  "es": "quedarse frito; dar cabezadas",
+  "def": "Dormirse sin querer, sobre todo sentado.",
+  "ex": "Grandpa nodded off in front of the TV.",
+  "exEs": "El abuelo se quedó frito delante de la tele.",
+  "lvl": "B2"
+ },
+ {
+  "v": "open up",
+  "ipa": "/ˈoʊpən ˈʌp/",
+  "say": "óupen áp",
+  "es": "abrirse (emocionalmente); abrir",
+  "def": "Hablar de tus sentimientos con sinceridad.",
+  "ex": "It took him a while to open up to me.",
+  "exEs": "Le costó un tiempo abrirse conmigo.",
+  "lvl": "B2"
+ },
+ {
+  "v": "pull over",
+  "ipa": "/pʊl ˈoʊvər/",
+  "say": "pul óuver",
+  "es": "parar a un lado (con el coche)",
+  "def": "Detener el vehículo en el arcén.",
+  "ex": "The police told us to pull over.",
+  "exEs": "La policía nos dijo que paráramos a un lado.",
+  "lvl": "B1"
+ },
+ {
+  "v": "put out",
+  "ipa": "/pʊt ˈaʊt/",
+  "say": "put áut",
+  "es": "apagar (un fuego, un cigarro)",
+  "def": "Extinguir algo que está ardiendo.",
+  "ex": "The firefighters put out the fire quickly.",
+  "exEs": "Los bomberos apagaron el fuego rápidamente.",
+  "lvl": "B1"
+ },
+ {
+  "v": "put up",
+  "ipa": "/pʊt ˈʌp/",
+  "say": "put áp",
+  "es": "colgar; montar; alojar",
+  "def": "Colocar algo en la pared, montar una tienda, o hospedar a alguien.",
+  "ex": "We put up the tent before it got dark.",
+  "exEs": "Montamos la tienda antes de que anocheciera.",
+  "lvl": "B1"
+ },
+ {
+  "v": "run over",
+  "ipa": "/rʌn ˈoʊvər/",
+  "say": "ran óuver",
+  "es": "atropellar",
+  "def": "Pasar por encima de alguien con un vehículo.",
+  "ex": "He was nearly run over by a bus.",
+  "exEs": "Casi le atropella un autobús.",
+  "lvl": "B1"
+ },
+ {
+  "v": "set off",
+  "ipa": "/set ˈɒf/",
+  "say": "set of",
+  "es": "ponerse en marcha; salir (de viaje)",
+  "def": "Empezar un viaje.",
+  "ex": "We set off at dawn to avoid the traffic.",
+  "exEs": "Salimos al amanecer para evitar el tráfico.",
+  "lvl": "B1"
+ },
+ {
+  "v": "settle down",
+  "ipa": "/ˈsetl ˈdaʊn/",
+  "say": "sétel dáun",
+  "es": "sentar la cabeza; establecerse",
+  "def": "Empezar una vida estable, o tranquilizarse.",
+  "ex": "He wants to settle down and have kids.",
+  "exEs": "Quiere sentar la cabeza y tener hijos.",
+  "lvl": "B2"
+ },
+ {
+  "v": "show off",
+  "ipa": "/ʃoʊ ˈɒf/",
+  "say": "shóu of",
+  "es": "presumir; fardar",
+  "def": "Intentar impresionar a los demás.",
+  "ex": "Stop showing off your new phone!",
+  "exEs": "¡Deja de fardar de móvil nuevo!",
+  "lvl": "B1"
+ },
+ {
+  "v": "shut up",
+  "ipa": "/ʃʌt ˈʌp/",
+  "say": "shat áp",
+  "es": "callarse (coloquial, brusco)",
+  "def": "Dejar de hablar. Puede sonar maleducado.",
+  "ex": "Shut up and listen for a second!",
+  "exEs": "¡Cállate y escucha un segundo!",
+  "lvl": "A2"
+ },
+ {
+  "v": "sign up",
+  "ipa": "/saɪn ˈʌp/",
+  "say": "sáin áp",
+  "es": "apuntarse; inscribirse",
+  "def": "Registrarse en un curso, web o actividad.",
+  "ex": "I've signed up for a cooking class.",
+  "exEs": "Me he apuntado a un curso de cocina.",
+  "lvl": "A2"
+ },
+ {
+  "v": "speak up",
+  "ipa": "/spiːk ˈʌp/",
+  "say": "spiik áp",
+  "es": "hablar más alto; dar tu opinión",
+  "def": "Subir la voz o decir lo que piensas.",
+  "ex": "Could you speak up? I can't hear you.",
+  "exEs": "¿Puedes hablar más alto? No te oigo.",
+  "lvl": "B1"
+ },
+ {
+  "v": "stand out",
+  "ipa": "/stænd ˈaʊt/",
+  "say": "stand áut",
+  "es": "destacar; sobresalir",
+  "def": "Ser fácil de ver o mejor que el resto.",
+  "ex": "Her red dress really stood out.",
+  "exEs": "Su vestido rojo destacaba muchísimo.",
+  "lvl": "B1"
+ },
+ {
+  "v": "stay up",
+  "ipa": "/steɪ ˈʌp/",
+  "say": "stéi áp",
+  "es": "quedarse despierto (hasta tarde)",
+  "def": "No irse a la cama.",
+  "ex": "We stayed up all night talking.",
+  "exEs": "Nos quedamos despiertos toda la noche hablando.",
+  "lvl": "A2"
+ },
+ {
+  "v": "switch off",
+  "ipa": "/swɪtʃ ˈɒf/",
+  "say": "suich of",
+  "es": "apagar; desconectar (mentalmente)",
+  "def": "Apagar un aparato, o dejar de prestar atención.",
+  "ex": "On holiday I completely switch off.",
+  "exEs": "En vacaciones desconecto por completo.",
+  "lvl": "B1"
+ },
+ {
+  "v": "take back",
+  "ipa": "/teɪk ˈbæk/",
+  "say": "téik bak",
+  "es": "devolver (a la tienda); retirar (lo dicho)",
+  "def": "Devolver un producto, o retractarse.",
+  "ex": "I take it back, I was wrong.",
+  "exEs": "Retiro lo dicho, me equivoqué.",
+  "lvl": "B1"
+ },
+ {
+  "v": "take over",
+  "ipa": "/teɪk ˈoʊvər/",
+  "say": "téik óuver",
+  "es": "hacerse cargo de; tomar el control",
+  "def": "Asumir el control de algo.",
+  "ex": "She'll take over the project while I'm away.",
+  "exEs": "Ella se hará cargo del proyecto mientras no esté.",
+  "lvl": "B2"
+ },
+ {
+  "v": "turn into",
+  "ipa": "/tɜːrn ˈɪntuː/",
+  "say": "tern íntu",
+  "es": "convertirse en",
+  "def": "Transformarse en otra cosa.",
+  "ex": "The caterpillar turned into a butterfly.",
+  "exEs": "La oruga se convirtió en mariposa.",
+  "lvl": "B1"
+ },
+ {
+  "v": "use up",
+  "ipa": "/juːz ˈʌp/",
+  "say": "iuus áp",
+  "es": "gastar; agotar",
+  "def": "Usar algo hasta que no queda nada.",
+  "ex": "Who used up all the hot water?",
+  "exEs": "¿Quién ha gastado toda el agua caliente?",
+  "lvl": "B1"
+ },
+ {
+  "v": "watch out",
+  "ipa": "/wɒtʃ ˈaʊt/",
+  "say": "uoch áut",
+  "es": "tener cuidado",
+  "def": "Estar alerta ante un peligro.",
+  "ex": "Watch out for pickpockets on the metro.",
+  "exEs": "Ojo con los carteristas en el metro.",
+  "lvl": "A2"
+ },
+ {
+  "v": "wear out",
+  "ipa": "/wer ˈaʊt/",
+  "say": "uér áut",
+  "es": "desgastar(se); agotar",
+  "def": "Gastar algo por el uso, o cansar mucho a alguien.",
+  "ex": "These shoes are completely worn out.",
+  "exEs": "Estos zapatos están completamente gastados.",
+  "lvl": "B1"
+ },
+ {
+  "v": "work on",
+  "ipa": "/ˈwɜːrk ɒn/",
+  "say": "uérk on",
+  "es": "trabajar en; mejorar",
+  "def": "Dedicar tiempo a mejorar algo.",
+  "ex": "I need to work on my pronunciation.",
+  "exEs": "Tengo que trabajar mi pronunciación.",
+  "lvl": "B1"
+ },
+ {
+  "v": "brush up on",
+  "ipa": "/brʌʃ ˈʌp ɒn/",
+  "say": "brash áp on",
+  "es": "repasar; refrescar",
+  "def": "Mejorar algo que sabías pero has olvidado un poco.",
+  "ex": "I need to brush up on my English before the trip.",
+  "exEs": "Tengo que refrescar mi inglés antes del viaje.",
+  "lvl": "B2"
+ },
+ {
+  "v": "bump into",
+  "ipa": "/bʌmp ˈɪntuː/",
+  "say": "bamp íntu",
+  "es": "encontrarse con (por casualidad); chocar con",
+  "def": "Encontrar a alguien sin esperarlo.",
+  "ex": "Guess who I bumped into yesterday!",
+  "exEs": "¡Adivina con quién me crucé ayer!",
+  "lvl": "B1"
+ },
+ {
+  "v": "burn out",
+  "ipa": "/bɜːrn ˈaʊt/",
+  "say": "bern áut",
+  "es": "quemarse; agotarse (por estrés)",
+  "def": "Acabar exhausto por trabajar demasiado.",
+  "ex": "If you don't rest, you'll burn out.",
+  "exEs": "Si no descansas, acabarás quemado.",
+  "lvl": "B2"
+ },
+ {
+  "v": "call out",
+  "ipa": "/kɔːl ˈaʊt/",
+  "say": "kol áut",
+  "es": "llamar en voz alta; denunciar públicamente",
+  "def": "Gritar el nombre de alguien, o criticar algo injusto.",
+  "ex": "She called him out for his rude comment.",
+  "exEs": "Le echó en cara su comentario maleducado.",
+  "lvl": "B2"
+ },
+ {
+  "v": "chill out",
+  "ipa": "/tʃɪl ˈaʊt/",
+  "say": "chil áut",
+  "es": "relajarse; tranquilizarse",
+  "def": "Descansar sin estrés (coloquial).",
+  "ex": "Let's just chill out at home tonight.",
+  "exEs": "Esta noche relajémonos en casa.",
+  "lvl": "B1"
+ },
+ {
+  "v": "clean up",
+  "ipa": "/kliːn ˈʌp/",
+  "say": "kliin áp",
+  "es": "limpiar; recoger",
+  "def": "Dejar un lugar limpio y ordenado.",
+  "ex": "Can you help me clean up after the party?",
+  "exEs": "¿Me ayudas a recoger después de la fiesta?",
+  "lvl": "A2"
+ },
+ {
+  "v": "come over",
+  "ipa": "/kʌm ˈoʊvər/",
+  "say": "kam óuver",
+  "es": "venir (a casa de alguien)",
+  "def": "Visitar a alguien en su casa.",
+  "ex": "Why don't you come over for dinner?",
+  "exEs": "¿Por qué no te vienes a cenar?",
+  "lvl": "A2"
+ },
+ {
+  "v": "cut off",
+  "ipa": "/kʌt ˈɒf/",
+  "say": "kat of",
+  "es": "cortar; aislar",
+  "def": "Interrumpir un suministro o una conversación.",
+  "ex": "We were cut off in the middle of the call.",
+  "exEs": "Se nos cortó la llamada a la mitad.",
+  "lvl": "B1"
+ },
+ {
+  "v": "dig into",
+  "ipa": "/dɪɡ ˈɪntuː/",
+  "say": "dig íntu",
+  "es": "investigar a fondo; hincarle el diente",
+  "def": "Examinar algo en profundidad, o empezar a comer con ganas.",
+  "ex": "Let's dig into the data and see what's wrong.",
+  "exEs": "Vamos a analizar los datos a fondo a ver qué falla.",
+  "lvl": "B2"
+ },
+ {
+  "v": "do over",
+  "ipa": "/duː ˈoʊvər/",
+  "say": "du óuver",
+  "es": "volver a hacer; rehacer",
+  "def": "Repetir algo desde el principio.",
+  "ex": "If I could do it over, I'd study medicine.",
+  "exEs": "Si pudiera volver a hacerlo, estudiaría medicina.",
+  "lvl": "B2"
+ },
+ {
+  "v": "fit in",
+  "ipa": "/fɪt ˈɪn/",
+  "say": "fit in",
+  "es": "encajar; integrarse",
+  "def": "Sentirse parte de un grupo.",
+  "ex": "It took me a while to fit in at my new school.",
+  "exEs": "Me costó encajar en mi nuevo colegio.",
+  "lvl": "B1"
+ },
+ {
+  "v": "get across",
+  "ipa": "/ɡet əˈkrɒs/",
+  "say": "guet ekrós",
+  "es": "transmitir; hacer entender",
+  "def": "Comunicar una idea con éxito.",
+  "ex": "He struggled to get his message across.",
+  "exEs": "Le costó hacer entender su mensaje.",
+  "lvl": "B2"
+ },
+ {
+  "v": "get ahead",
+  "ipa": "/ɡet əˈhed/",
+  "say": "guet ejéd",
+  "es": "prosperar; salir adelante",
+  "def": "Tener éxito en el trabajo o en la vida.",
+  "ex": "You have to work hard to get ahead.",
+  "exEs": "Tienes que trabajar duro para prosperar.",
+  "lvl": "B2"
+ },
+ {
+  "v": "get down to",
+  "ipa": "/ɡet ˈdaʊn tə/",
+  "say": "guet dáun tu",
+  "es": "ponerse a (en serio)",
+  "def": "Empezar a hacer algo con concentración.",
+  "ex": "Let's get down to business.",
+  "exEs": "Vamos al grano.",
+  "lvl": "B2"
+ },
+ {
+  "v": "give away",
+  "ipa": "/ɡɪv əˈweɪ/",
+  "say": "guiv euéi",
+  "es": "regalar; revelar (un secreto)",
+  "def": "Dar algo gratis, o desvelar información.",
+  "ex": "Don't give away the ending of the film!",
+  "exEs": "¡No destripes el final de la peli!",
+  "lvl": "B1"
+ },
+ {
+  "v": "go along with",
+  "ipa": "/ɡoʊ əˈlɒŋ wɪð/",
+  "say": "góu elóng uiz",
+  "es": "estar de acuerdo con; seguir la corriente",
+  "def": "Aceptar una idea o plan de otra persona.",
+  "ex": "I'll go along with whatever you decide.",
+  "exEs": "Me apunto a lo que decidas.",
+  "lvl": "B2"
+ },
+ {
+  "v": "go back",
+  "ipa": "/ɡoʊ ˈbæk/",
+  "say": "góu bak",
+  "es": "volver; regresar",
+  "def": "Regresar a un lugar o situación anterior.",
+  "ex": "I'd love to go back to Japan one day.",
+  "exEs": "Me encantaría volver a Japón algún día.",
+  "lvl": "A2"
+ },
+ {
+  "v": "go down",
+  "ipa": "/ɡoʊ ˈdaʊn/",
+  "say": "góu dáun",
+  "es": "bajar; disminuir",
+  "def": "Reducirse una cantidad, o descender.",
+  "ex": "Prices have gone down this month.",
+  "exEs": "Los precios han bajado este mes.",
+  "lvl": "A2"
+ },
+ {
+  "v": "go up",
+  "ipa": "/ɡoʊ ˈʌp/",
+  "say": "góu áp",
+  "es": "subir; aumentar",
+  "def": "Incrementarse una cantidad, o ascender.",
+  "ex": "The price of petrol keeps going up.",
+  "exEs": "El precio de la gasolina no para de subir.",
+  "lvl": "A2"
+ },
+ {
+  "v": "hang on",
+  "ipa": "/hæŋ ˈɒn/",
+  "say": "jang on",
+  "es": "esperar un momento; agarrarse",
+  "def": "Esperar un poco (coloquial).",
+  "ex": "Hang on a sec, I'm coming!",
+  "exEs": "¡Espera un segundo, ya voy!",
+  "lvl": "B1"
+ },
+ {
+  "v": "head out",
+  "ipa": "/hed ˈaʊt/",
+  "say": "jed áut",
+  "es": "salir; irse",
+  "def": "Marcharse de un sitio (coloquial).",
+  "ex": "I'm heading out, see you later!",
+  "exEs": "Me voy, ¡hasta luego!",
+  "lvl": "B1"
+ },
+ {
+  "v": "iron out",
+  "ipa": "/ˈaɪərn ˈaʊt/",
+  "say": "áiern áut",
+  "es": "resolver (detalles, problemas)",
+  "def": "Solucionar pequeños problemas.",
+  "ex": "We still need to iron out a few details.",
+  "exEs": "Aún tenemos que pulir algunos detalles.",
+  "lvl": "C1"
+ },
+ {
+  "v": "keep away",
+  "ipa": "/kiːp əˈweɪ/",
+  "say": "kiip euéi",
+  "es": "mantener(se) alejado",
+  "def": "No acercarse a algo o alguien.",
+  "ex": "Keep away from the edge of the cliff.",
+  "exEs": "No te acerques al borde del acantilado.",
+  "lvl": "B1"
+ },
+ {
+  "v": "lay out",
+  "ipa": "/leɪ ˈaʊt/",
+  "say": "léi áut",
+  "es": "exponer; disponer",
+  "def": "Presentar algo de forma clara u organizarlo en un espacio.",
+  "ex": "She laid out her plan step by step.",
+  "exEs": "Expuso su plan paso a paso.",
+  "lvl": "B2"
+ },
+ {
+  "v": "lighten up",
+  "ipa": "/ˈlaɪtn ˈʌp/",
+  "say": "láiten áp",
+  "es": "tomárselo con más calma",
+  "def": "Dejar de ser tan serio.",
+  "ex": "Lighten up, it was just a joke!",
+  "exEs": "¡Relájate, que era solo una broma!",
+  "lvl": "B2"
+ },
+ {
+  "v": "live up to",
+  "ipa": "/lɪv ˈʌp tə/",
+  "say": "liv áp tu",
+  "es": "estar a la altura de",
+  "def": "Cumplir con las expectativas.",
+  "ex": "The film didn't live up to the hype.",
+  "exEs": "La peli no estuvo a la altura de tanto bombo.",
+  "lvl": "B2"
+ },
+ {
+  "v": "look back on",
+  "ipa": "/lʊk ˈbæk ɒn/",
+  "say": "luk bak on",
+  "es": "recordar; mirar atrás",
+  "def": "Pensar en algo del pasado.",
+  "ex": "I look back on those years with a smile.",
+  "exEs": "Recuerdo esos años con una sonrisa.",
+  "lvl": "B2"
+ },
+ {
+  "v": "make for",
+  "ipa": "/ˈmeɪk fɔːr/",
+  "say": "méik for",
+  "es": "dirigirse a; contribuir a",
+  "def": "Ir hacia un lugar, o crear cierto resultado.",
+  "ex": "Good weather makes for a great holiday.",
+  "exEs": "El buen tiempo hace que las vacaciones sean geniales.",
+  "lvl": "C1"
+ },
+ {
+  "v": "mess up",
+  "ipa": "/mes ˈʌp/",
+  "say": "mes áp",
+  "es": "fastidiar; liarla; desordenar",
+  "def": "Hacer algo mal o estropearlo.",
+  "ex": "I totally messed up the interview.",
+  "exEs": "La lié por completo en la entrevista.",
+  "lvl": "B1"
+ },
+ {
+  "v": "opt out",
+  "ipa": "/ɒpt ˈaʊt/",
+  "say": "opt áut",
+  "es": "decidir no participar; darse de baja",
+  "def": "Elegir no formar parte de algo.",
+  "ex": "You can opt out of the newsletter at any time.",
+  "exEs": "Puedes darte de baja del boletín cuando quieras.",
+  "lvl": "B2"
+ },
+ {
+  "v": "pay off",
+  "ipa": "/peɪ ˈɒf/",
+  "say": "péi of",
+  "es": "valer la pena; saldar (una deuda)",
+  "def": "Dar buenos resultados, o terminar de pagar algo.",
+  "ex": "All your hard work will pay off.",
+  "exEs": "Todo tu esfuerzo dará sus frutos.",
+  "lvl": "B2"
+ },
+ {
+  "v": "pick on",
+  "ipa": "/ˈpɪk ɒn/",
+  "say": "pik on",
+  "es": "meterse con",
+  "def": "Molestar o criticar a alguien repetidamente.",
+  "ex": "Stop picking on your little brother!",
+  "exEs": "¡Deja de meterte con tu hermano pequeño!",
+  "lvl": "B1"
+ },
+ {
+  "v": "pull off",
+  "ipa": "/pʊl ˈɒf/",
+  "say": "pul of",
+  "es": "lograr (algo difícil)",
+  "def": "Conseguir algo complicado.",
+  "ex": "I can't believe we pulled it off!",
+  "exEs": "¡No me creo que lo hayamos conseguido!",
+  "lvl": "B2"
+ },
+ {
+  "v": "put down",
+  "ipa": "/pʊt ˈdaʊn/",
+  "say": "put dáun",
+  "es": "dejar; menospreciar; sacrificar (animal)",
+  "def": "Soltar algo, o humillar a alguien.",
+  "ex": "Put down your phone and listen to me.",
+  "exEs": "Deja el móvil y escúchame.",
+  "lvl": "B1"
+ },
+ {
+  "v": "rip off",
+  "ipa": "/rɪp ˈɒf/",
+  "say": "rip of",
+  "es": "timar; estafar",
+  "def": "Cobrar demasiado por algo.",
+  "ex": "Ten euros for a coffee? That's a rip-off!",
+  "exEs": "¿Diez euros por un café? ¡Eso es un timo!",
+  "lvl": "B2"
+ },
+ {
+  "v": "rule out",
+  "ipa": "/ruːl ˈaʊt/",
+  "say": "ruul áut",
+  "es": "descartar",
+  "def": "Eliminar una posibilidad.",
+  "ex": "The doctor ruled out anything serious.",
+  "exEs": "El médico descartó que fuera algo grave.",
+  "lvl": "B2"
+ },
+ {
+  "v": "run late",
+  "ipa": "/rʌn ˈleɪt/",
+  "say": "ran léit",
+  "es": "ir con retraso",
+  "def": "Ir tarde respecto a la hora prevista.",
+  "ex": "Sorry, I'm running a bit late.",
+  "exEs": "Perdona, voy un poco tarde.",
+  "lvl": "B1"
+ },
+ {
+  "v": "screw up",
+  "ipa": "/skruː ˈʌp/",
+  "say": "skruu áp",
+  "es": "meter la pata; fastidiar (coloquial)",
+  "def": "Cometer un error grave.",
+  "ex": "I screwed up and forgot her birthday.",
+  "exEs": "Metí la pata y me olvidé de su cumpleaños.",
+  "lvl": "B2"
+ },
+ {
+  "v": "set back",
+  "ipa": "/set ˈbæk/",
+  "say": "set bak",
+  "es": "retrasar; costar (dinero)",
+  "def": "Causar un retraso, o costar mucho dinero.",
+  "ex": "That new laptop set me back 1,500 euros.",
+  "exEs": "Ese portátil nuevo me costó 1.500 euros.",
+  "lvl": "C1"
+ },
+ {
+  "v": "sleep in",
+  "ipa": "/sliːp ˈɪn/",
+  "say": "sliip in",
+  "es": "quedarse dormido; dormir hasta tarde",
+  "def": "Dormir más de lo habitual por la mañana.",
+  "ex": "On Sundays I love to sleep in.",
+  "exEs": "Los domingos me encanta quedarme en la cama hasta tarde.",
+  "lvl": "B1"
+ },
+ {
+  "v": "sleep on it",
+  "ipa": "/ˈsliːp ɒn ɪt/",
+  "say": "sliip on it",
+  "es": "consultarlo con la almohada",
+  "def": "Esperar al día siguiente para decidir.",
+  "ex": "I'm not sure yet, let me sleep on it.",
+  "exEs": "Aún no lo tengo claro, déjame consultarlo con la almohada.",
+  "lvl": "B2"
+ },
+ {
+  "v": "step down",
+  "ipa": "/step ˈdaʊn/",
+  "say": "step dáun",
+  "es": "dimitir; renunciar",
+  "def": "Dejar un cargo importante.",
+  "ex": "The president stepped down after the scandal.",
+  "exEs": "El presidente dimitió tras el escándalo.",
+  "lvl": "B2"
+ },
+ {
+  "v": "stick to",
+  "ipa": "/ˈstɪk tə/",
+  "say": "stik tu",
+  "es": "ceñirse a; mantener",
+  "def": "Seguir un plan o decisión sin cambiarlo.",
+  "ex": "Stick to the plan and you'll be fine.",
+  "exEs": "Cíñete al plan y todo irá bien.",
+  "lvl": "B1"
+ },
+ {
+  "v": "take in",
+  "ipa": "/teɪk ˈɪn/",
+  "say": "téik in",
+  "es": "asimilar; acoger; engañar",
+  "def": "Comprender información, o dar refugio.",
+  "ex": "It's a lot of information to take in.",
+  "exEs": "Es mucha información para asimilar.",
+  "lvl": "B2"
+ },
+ {
+  "v": "take on",
+  "ipa": "/teɪk ˈɒn/",
+  "say": "téik on",
+  "es": "asumir; contratar; enfrentarse a",
+  "def": "Aceptar una responsabilidad o un reto.",
+  "ex": "I've taken on too much work this month.",
+  "exEs": "Este mes he asumido demasiado trabajo.",
+  "lvl": "B2"
+ },
+ {
+  "v": "think ahead",
+  "ipa": "/θɪŋk əˈhed/",
+  "say": "zink ejéd",
+  "es": "pensar en el futuro; prever",
+  "def": "Planificar lo que puede pasar.",
+  "ex": "Think ahead and book your tickets early.",
+  "exEs": "Sé previsor y compra las entradas con antelación.",
+  "lvl": "B2"
+ },
+ {
+  "v": "throw up",
+  "ipa": "/θroʊ ˈʌp/",
+  "say": "zróu áp",
+  "es": "vomitar",
+  "def": "Echar lo que has comido (coloquial).",
+  "ex": "I felt so sick I nearly threw up.",
+  "exEs": "Me encontraba tan mal que casi vomito.",
+  "lvl": "B1"
+ },
+ {
+  "v": "wind down",
+  "ipa": "/waɪnd ˈdaʊn/",
+  "say": "uáind dáun",
+  "es": "relajarse; ir terminando",
+  "def": "Descansar tras un día ajetreado.",
+  "ex": "I read before bed to wind down.",
+  "exEs": "Leo antes de dormir para relajarme.",
+  "lvl": "C1"
+ }
+]
