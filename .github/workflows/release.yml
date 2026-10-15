@@ -43,7 +43,7 @@ jobs:
         env:
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          cp app/build/outputs/apk/release/app-release.apk PhrasalDaily-1.0.${{ github.run_number }}.apk
+          cp app/build/outputs/apk/release/app-release.apk PhrasalDaily.apk
           printf '%s\n' "${COMMIT_MESSAGE:-Nueva versión}" | head -n 1 > notes.txt
 
       - name: Publish GitHub release
@@ -52,5 +52,5 @@ jobs:
           tag_name: v1.0.${{ github.run_number }}
           name: Phrasal Daily 1.0.${{ github.run_number }}
           body_path: notes.txt
-          files: PhrasalDaily-1.0.${{ github.run_number }}.apk
+          files: PhrasalDaily.apk
           make_latest: true

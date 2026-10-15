@@ -51,6 +51,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.andoni.phrasaldaily.BuildConfig
 import com.andoni.phrasaldaily.data.ContentMode
 import com.andoni.phrasaldaily.data.ThemeMode
@@ -182,6 +183,22 @@ fun SettingsScreen(vm: AppViewModel, user: UserData) {
         SettingsCard("Datos") {
             OutlinedButton(onClick = { confirmReset = true }, modifier = Modifier.fillMaxWidth()) {
                 Text("Reiniciar progreso", color = MaterialTheme.colorScheme.error)
+            }
+        }
+
+        SettingsCard("Actualizaciones") {
+            val updateMessage by vm.updateMessage.collectAsStateWithLifecycle()
+            Text(
+                "Versión instalada: ${BuildConfig.VERSION_NAME}. La app busca versiones nuevas cada vez que la abres.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Spacer(Modifier.height(8.dp))
+            OutlinedButton(onClick = { vm.checkForUpdates(manual = true) }, modifier = Modifier.fillMaxWidth()) {
+                Text("Buscar actualizaciones")
+            }
+            updateMessage?.let {
+                Text(it, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 6.dp))
             }
         }
 

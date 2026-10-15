@@ -19,10 +19,9 @@ Contenido incluido: 199 phrasal verbs y 113 false friends (`app/src/main/assets/
 
 Cada push a `main` lanza GitHub Actions, que compila el APK y lo publica como *Release*.
 
-1. Instala **Obtainium** en el móvil (https://github.com/ImranR98/Obtainium/releases o F-Droid).
-2. En Obtainium: **Añadir app** → pega la URL de este repositorio → **Añadir** → **Instalar**.
-3. Android te pedirá permitir que Obtainium instale apps: acéptalo.
-4. Obtainium comprobará el repo periódicamente e instalará las versiones nuevas.
+1. Abre en el móvil https://github.com/andonialvarez/phrasal-daily/releases/latest/download/PhrasalDaily.apk y abre el archivo descargado.
+2. Android te pedirá permitir instalar apps desde el navegador: acéptalo e instala.
+3. Cada vez que abras la app, comprueba si hay una versión nueva en GitHub y te ofrece actualizarla (también desde Ajustes > Buscar actualizaciones).
 
 ## Compilar en local
 

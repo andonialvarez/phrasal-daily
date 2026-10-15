@@ -20,6 +20,7 @@ import com.andoni.phrasaldaily.ui.AppViewModel
 import com.andoni.phrasaldaily.ui.MainScaffold
 import com.andoni.phrasaldaily.ui.screens.AchievementUnlockedDialog
 import com.andoni.phrasaldaily.ui.screens.OnboardingScreen
+import com.andoni.phrasaldaily.ui.screens.UpdateDialog
 import com.andoni.phrasaldaily.ui.theme.PhrasalTheme
 
 class MainActivity : ComponentActivity() {
@@ -32,6 +33,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             val user by vm.user.collectAsStateWithLifecycle()
             val newAchievements by vm.newAchievements.collectAsStateWithLifecycle()
+            val update by vm.update.collectAsStateWithLifecycle()
+            val updateProgress by vm.updateProgress.collectAsStateWithLifecycle()
             PhrasalTheme(user?.theme ?: ThemeMode.SYSTEM) {
                 Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     val u = user
@@ -44,7 +47,15 @@ class MainActivity : ComponentActivity() {
                         }
                         else -> MainScaffold(vm, u)
                     }
-                    if (newAchievements.isNotEmpty()) {
+                    update?.let { info ->
+                        UpdateDialog(
+                            info = info,
+                            progress = updateProgress,
+                            onUpdate = { vm.startUpdate() },
+                            onDismiss = { vm.dismissUpdate() },
+                        )
+                    }
+                    if (update == null && newAchievements.isNotEmpty()) {
                         AchievementUnlockedDialog(newAchievements) { vm.dismissAchievements() }
                     }
                 }

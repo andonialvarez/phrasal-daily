@@ -338,3 +338,51 @@ fun shareItem(context: Context, item: StudyItem) {
     }
     context.startActivity(Intent.createChooser(intent, "Compartir"))
 }
+
+@Composable
+fun UpdateDialog(
+    info: com.andoni.phrasaldaily.update.UpdateInfo,
+    progress: Float?,
+    onUpdate: () -> Unit,
+    onDismiss: () -> Unit,
+) {
+    val downloading = progress != null
+    AlertDialog(
+        onDismissRequest = { if (!downloading) onDismiss() },
+        title = { Text("¡Nueva versión disponible!") },
+        text = {
+            Column {
+                Text("Phrasal Daily ${info.versionName} ya está lista.")
+                if (info.notes.isNotBlank()) {
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        "Novedades: ${info.notes}",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                if (progress != null) {
+                    Spacer(Modifier.height(16.dp))
+                    androidx.compose.material3.LinearProgressIndicator(
+                        progress = { progress },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    Text("Descargando… ${(progress * 100).toInt()}%", style = MaterialTheme.typography.labelSmall)
+                } else {
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        "Tu progreso se mantiene. La primera vez, Android te pedirá permitir que Phrasal Daily instale apps.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onUpdate, enabled = !downloading) { Text("Actualizar") }
+        },
+        dismissButton = {
+            if (!downloading) TextButton(onClick = onDismiss) { Text("Más tarde") }
+        },
+    )
+}

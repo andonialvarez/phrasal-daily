@@ -17,6 +17,8 @@ import com.andoni.phrasaldaily.domain.StatsCalculator
 import com.andoni.phrasaldaily.notify.ReminderReceiver
 import com.andoni.phrasaldaily.notify.ReminderScheduler
 import com.andoni.phrasaldaily.tts.Speaker
+import com.andoni.phrasaldaily.update.UpdateInfo
+import com.andoni.phrasaldaily.update.Updater
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -46,6 +48,50 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     private val _newAchievements = MutableStateFlow<List<String>>(emptyList())
     val newAchievements: StateFlow<List<String>> = _newAchievements.asStateFlow()
 
+    /** Newer release found on GitHub, shown as a dialog. */
+    private val _update = MutableStateFlow<UpdateInfo?>(null)
+    val update: StateFlow<UpdateInfo?> = _update.asStateFlow()
+
+    /** Download progress 0..1 while an update downloads, null otherwise. */
+    private val _updateProgress = MutableStateFlow<Float?>(null)
+    val updateProgress: StateFlow<Float?> = _updateProgress.asStateFlow()
+
+    private val _updateMessage = MutableStateFlow<String?>(null)
+    val updateMessage: StateFlow<String?> = _updateMessage.asStateFlow()
+
+    private var lastUpdateCheck = 0L
+
+    fun checkForUpdates(manual: Boolean = false) = viewModelScope.launch {
+        val now = System.currentTimeMillis()
+        if (!manual && now - lastUpdateCheck < 60 * 60 * 1000L) return@launch
+        lastUpdateCheck = now
+        if (manual) _updateMessage.value = "Buscando…"
+        val found = Updater.check()
+        if (found != null) {
+            _update.value = found
+            _updateMessage.value = null
+        } else if (manual) {
+            _updateMessage.value = "Ya tienes la última versión."
+        }
+    }
+
+    fun startUpdate() = viewModelScope.launch {
+        val info = _update.value ?: return@launch
+        _updateProgress.value = 0f
+        runCatching {
+            val apk = Updater.download(getApplication(), info) { _updateProgress.value = it }
+            Updater.install(getApplication(), apk)
+        }.onFailure {
+            _updateMessage.value = "No se pudo descargar la actualización. Revisa tu conexión."
+        }
+        _updateProgress.value = null
+        _update.value = null
+    }
+
+    fun dismissUpdate() {
+        _update.value = null
+    }
+
     fun todayItems(user: UserData, today: LocalDate = LocalDate.now()): List<StudyItem> {
         val day = user.dayIndex(today)
         val pv = content.phrasalForDay(day)
@@ -60,6 +106,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Called every time the app comes to the foreground. */
     fun onAppOpened() = viewModelScope.launch {
+        checkForUpdates()
         val u = users.current()
         if (!u.onboarded) return@launch
         users.recordVisit()
