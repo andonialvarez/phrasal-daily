@@ -35,10 +35,11 @@ Revisión del 15 de octubre de 2026 frente a los requisitos actuales de Google P
 1. Entra en https://admob.google.com con la misma cuenta de Google y date de alta (es gratis).
 2. **Apps > Añadir app** > Android. Si aún no está en Play, di que no está publicada; luego la vinculas.
 3. Crea un **bloque de anuncios** de tipo **Banner**.
-4. Pásame el **ID de aplicación** (`ca-app-pub-…~…`) y el **ID del bloque** (`ca-app-pub-…/…`). No son secretos: los pongo en la versión de Play.
+4. ✅ Hecho (16 oct): ID de aplicación `ca-app-pub-8041642304276543~9465612775` y bloque de banner `ca-app-pub-8041642304276543/8495401177`, ya puestos en la versión de Play (`gradle.properties`). No son secretos.
 5. En **Privacidad y mensajes**, crea el mensaje de **RGPD** (consentimiento europeo) para la app y publícalo. Sin él, en España apenas se mostrarán anuncios.
 6. En **Pagos**, rellena tus datos fiscales y bancarios. AdMob paga cada mes cuando superas el umbral mínimo de pago (en euros ronda los 70 €).
-7. Cuando la app esté en Play, publica un archivo `app-ads.txt` en la web de desarrollador que pongas en la ficha. AdMob te da el contenido; te lo puedo preparar.
+7. Cuando la app esté publicada en Play, en AdMob ve a **Aplicaciones > Phrasal Daily > Configuración de la aplicación** y pulsa **Vincular a una tienda de apps** para conectarla con su ficha. Así AdMob la revisa y empieza a servir anuncios con normalidad.
+8. Después, publica un archivo `app-ads.txt` en la web de desarrollador que pongas en la ficha. AdMob te da el contenido; te lo puedo preparar.
 
 > **Nunca pulses tus propios anuncios reales**: AdMob puede cerrarte la cuenta. Por eso la versión de GitHub que tienes en el móvil muestra siempre anuncios de prueba ("Test Ad"), que puedes tocar sin problema.
 
