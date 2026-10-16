@@ -31,8 +31,8 @@ jobs:
         run: |
           AAPT=$(ls "$ANDROID_HOME"/build-tools/*/aapt | sort -V | tail -n 1)
           "$AAPT" dump permissions app/build/outputs/apk/play/release/app-play-release.apk | tee perms.txt
-          if grep -q -E "REQUEST_INSTALL_PACKAGES|android.permission.INTERNET" perms.txt; then
-            echo "::error::The Play build must not request install or internet permissions"; exit 1
+          if grep -q "REQUEST_INSTALL_PACKAGES" perms.txt; then
+            echo "::error::The Play build must not request permission to install packages"; exit 1
           fi
 
       # Google Play bundle: only when the upload key secrets exist (see PUBLICAR_EN_GOOGLE_PLAY.md).

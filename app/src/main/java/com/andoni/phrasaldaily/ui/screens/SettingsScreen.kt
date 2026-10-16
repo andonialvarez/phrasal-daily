@@ -1,6 +1,7 @@
 package com.andoni.phrasaldaily.ui.screens
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.os.Build
 import android.provider.Settings
@@ -53,6 +54,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.andoni.phrasaldaily.BuildConfig
+import com.andoni.phrasaldaily.ads.Ads
 import com.andoni.phrasaldaily.data.ContentMode
 import com.andoni.phrasaldaily.data.ThemeMode
 import com.andoni.phrasaldaily.data.UserData
@@ -204,9 +206,21 @@ fun SettingsScreen(vm: AppViewModel, user: UserData) {
             }
         }
 
+        val adPrivacyRequired by Ads.privacyOptionsRequired.collectAsStateWithLifecycle()
+        if (adPrivacyRequired) SettingsCard("Anuncios") {
+            Text(
+                "La app es gratis gracias a los anuncios. Puedes cambiar tu consentimiento cuando quieras.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            TextButton(onClick = { (context as? Activity)?.let(Ads::showPrivacyOptions) }) {
+                Text("Privacidad de los anuncios")
+            }
+        }
+
         SettingsCard("Acerca de") {
             Text(
-                "Todo tu progreso se guarda solo en este móvil. La app no recoge ni comparte datos personales.",
+                "Tu progreso se guarda solo en este móvil. Los anuncios los sirve Google AdMob; más detalles en la política de privacidad.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

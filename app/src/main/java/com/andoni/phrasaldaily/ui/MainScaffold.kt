@@ -1,6 +1,7 @@
 package com.andoni.phrasaldaily.ui
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.EmojiEvents
@@ -22,11 +23,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.andoni.phrasaldaily.ads.BannerAd
 import com.andoni.phrasaldaily.data.UserData
 import com.andoni.phrasaldaily.ui.screens.LibraryScreen
 import com.andoni.phrasaldaily.ui.screens.ProgressScreen
@@ -59,15 +62,18 @@ fun MainScaffold(vm: AppViewModel, user: UserData) {
 
     Scaffold(
         bottomBar = {
-            NavigationBar {
-                tabs.forEach { tab ->
-                    val selected = current == tab.route
-                    NavigationBarItem(
-                        selected = selected,
-                        onClick = { go(tab.route) },
-                        icon = { Icon(if (selected) tab.selectedIcon else tab.icon, null) },
-                        label = { Text(tab.label, maxLines = 1) },
-                    )
+            Column {
+                BannerAd(Modifier.padding(bottom = 4.dp))
+                NavigationBar {
+                    tabs.forEach { tab ->
+                        val selected = current == tab.route
+                        NavigationBarItem(
+                            selected = selected,
+                            onClick = { go(tab.route) },
+                            icon = { Icon(if (selected) tab.selectedIcon else tab.icon, null) },
+                            label = { Text(tab.label, maxLines = 1) },
+                        )
+                    }
                 }
             }
         },

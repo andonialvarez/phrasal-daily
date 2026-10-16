@@ -36,18 +36,31 @@ android {
         }
     }
 
+    // Google's public AdMob test IDs; they show "Test Ad" banners and never pay out.
+    val testAdmobAppId = "ca-app-pub-3940256099942544~3347511713"
+    val testBannerId = "ca-app-pub-3940256099942544/9214589741"
+
     flavorDimensions += "distribution"
     productFlavors {
         // Installed from the GitHub download link; updates itself from GitHub Releases.
+        // Always shows test ads, so clicking them on your own phone is safe.
         create("github") {
             dimension = "distribution"
             buildConfigField("boolean", "SELF_UPDATE", "true")
+            buildConfigField("boolean", "ADS_REQUIRE_CONSENT", "false")
+            buildConfigField("String", "ADMOB_BANNER_ID", "\"$testBannerId\"")
+            manifestPlaceholders["admobAppId"] = testAdmobAppId
             signingConfig = signingConfigs.getByName("debug")
         }
-        // Published on Google Play: Play handles updates, so no self-update and no extra permissions.
+        // Published on Google Play: Play handles updates, so no self-update. Real ads once the
+        // AdMob IDs are set in gradle.properties (admobAppId / admobBannerId).
         create("play") {
             dimension = "distribution"
             buildConfigField("boolean", "SELF_UPDATE", "false")
+            buildConfigField("boolean", "ADS_REQUIRE_CONSENT", "true")
+            val bannerId = (project.findProperty("admobBannerId") as String?) ?: testBannerId
+            buildConfigField("String", "ADMOB_BANNER_ID", "\"$bannerId\"")
+            manifestPlaceholders["admobAppId"] = (project.findProperty("admobAppId") as String?) ?: testAdmobAppId
             signingConfig = signingConfigs.findByName("upload") ?: signingConfigs.getByName("debug")
         }
     }
@@ -85,6 +98,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("androidx.navigation:navigation-compose:2.8.5")
     implementation("androidx.datastore:datastore-preferences:1.1.1")
+    implementation("com.google.android.gms:play-services-ads:25.5.0")
+    implementation("com.google.android.ump:user-messaging-platform:4.0.0")
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")

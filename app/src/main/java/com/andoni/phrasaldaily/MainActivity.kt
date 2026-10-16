@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.andoni.phrasaldaily.ads.Ads
 import com.andoni.phrasaldaily.data.ThemeMode
 import com.andoni.phrasaldaily.ui.AppViewModel
 import com.andoni.phrasaldaily.ui.MainScaffold
@@ -30,6 +31,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        Ads.gatherConsentAndStart(this)
         setContent {
             val user by vm.user.collectAsStateWithLifecycle()
             val newAchievements by vm.newAchievements.collectAsStateWithLifecycle()

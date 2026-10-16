@@ -25,7 +25,7 @@ Cada push a `main` lanza GitHub Actions, que compila el APK y lo publica como *R
 
 ## Google Play
 
-La versión `play` no se actualiza sola (lo prohíbe Google Play). Requisitos y pasos: [PUBLICAR_EN_GOOGLE_PLAY.md](PUBLICAR_EN_GOOGLE_PLAY.md). Privacidad: [PRIVACY.md](PRIVACY.md).
+La versión `play` no se actualiza sola (lo prohíbe Google Play) y muestra anuncios de AdMob con consentimiento RGPD; la de GitHub muestra anuncios de prueba. Requisitos y pasos: [PUBLICAR_EN_GOOGLE_PLAY.md](PUBLICAR_EN_GOOGLE_PLAY.md). Privacidad: [PRIVACY.md](PRIVACY.md).
 
 ## Compilar en local
 
