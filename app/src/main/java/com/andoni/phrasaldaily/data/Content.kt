@@ -2,6 +2,7 @@ package com.andoni.phrasaldaily.data
 
 import android.content.Context
 import org.json.JSONArray
+import org.json.JSONObject
 
 enum class ItemType { PHRASAL, FALSE_FRIEND }
 
@@ -49,48 +50,67 @@ data class FalseFriend(
     override val type get() = ItemType.FALSE_FRIEND
 }
 
-/** Bundled content, loaded once from assets. */
+/** Spanish used for translations and examples. */
+enum class SpanishVariant { SPAIN, LATAM }
+
+/** Bundled content, loaded once from assets. Latin American wording comes from latam.json overrides. */
 class ContentRepository(context: Context) {
 
-    val phrasalVerbs: List<PhrasalVerb>
-    val falseFriends: List<FalseFriend>
+    private val spain: Pair<List<PhrasalVerb>, List<FalseFriend>>
+    private val latam: Pair<List<PhrasalVerb>, List<FalseFriend>>
+
+    /** Set from the user's settings; screens read the lists below. */
+    @Volatile var variant: SpanishVariant = SpanishVariant.SPAIN
+
+    val phrasalVerbs: List<PhrasalVerb> get() = forVariant().first
+    val falseFriends: List<FalseFriend> get() = forVariant().second
+
+    private fun forVariant() = if (variant == SpanishVariant.LATAM) latam else spain
 
     init {
         val assets = context.applicationContext.assets
-        phrasalVerbs = JSONArray(assets.open("phrasal_verbs.json").bufferedReader().use { it.readText() })
-            .let { arr ->
-                List(arr.length()) { i ->
-                    val o = arr.getJSONObject(i)
-                    PhrasalVerb(
-                        index = i,
-                        headword = o.getString("v"),
-                        ipa = o.getString("ipa"),
-                        sayAs = o.getString("say"),
-                        translation = o.getString("es"),
-                        definition = o.getString("def"),
-                        example = o.getString("ex"),
-                        exampleEs = o.getString("exEs"),
-                        level = o.optString("lvl", "B1"),
-                    )
-                }
+        fun read(name: String) = assets.open(name).bufferedReader().use { it.readText() }
+        val pvJson = JSONArray(read("phrasal_verbs.json"))
+        val ffJson = JSONArray(read("false_friends.json"))
+        val overrides = JSONObject(read("latam.json"))
+        fun field(o: JSONObject, id: String, key: String, latin: Boolean): String =
+            overrides.optJSONObject(id)?.takeIf { latin && it.has(key) }?.getString(key) ?: o.getString(key)
+
+        fun build(latin: Boolean): Pair<List<PhrasalVerb>, List<FalseFriend>> {
+            val pvs = List(pvJson.length()) { i ->
+                val o = pvJson.getJSONObject(i)
+                val id = "pv:$i"
+                PhrasalVerb(
+                    index = i,
+                    headword = o.getString("v"),
+                    ipa = o.getString("ipa"),
+                    sayAs = o.getString("say"),
+                    translation = field(o, id, "es", latin),
+                    definition = field(o, id, "def", latin),
+                    example = o.getString("ex"),
+                    exampleEs = field(o, id, "exEs", latin),
+                    level = o.optString("lvl", "B1"),
+                )
             }
-        falseFriends = JSONArray(assets.open("false_friends.json").bufferedReader().use { it.readText() })
-            .let { arr ->
-                List(arr.length()) { i ->
-                    val o = arr.getJSONObject(i)
-                    FalseFriend(
-                        index = i,
-                        headword = o.getString("w"),
-                        ipa = o.getString("ipa"),
-                        sayAs = o.getString("say"),
-                        looksLike = o.getString("looks"),
-                        translation = o.getString("means"),
-                        tip = o.getString("tip"),
-                        example = o.getString("ex"),
-                        exampleEs = o.getString("exEs"),
-                    )
-                }
+            val ffs = List(ffJson.length()) { i ->
+                val o = ffJson.getJSONObject(i)
+                val id = "ff:$i"
+                FalseFriend(
+                    index = i,
+                    headword = o.getString("w"),
+                    ipa = o.getString("ipa"),
+                    sayAs = o.getString("say"),
+                    looksLike = field(o, id, "looks", latin),
+                    translation = field(o, id, "means", latin),
+                    tip = field(o, id, "tip", latin),
+                    example = o.getString("ex"),
+                    exampleEs = field(o, id, "exEs", latin),
+                )
             }
+            return pvs to ffs
+        }
+        spain = build(latin = false)
+        latam = build(latin = true)
     }
 
     fun phrasalForDay(dayIndex: Long): PhrasalVerb =

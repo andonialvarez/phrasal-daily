@@ -58,7 +58,7 @@ fun LibraryScreen(vm: AppViewModel, user: UserData) {
     var query by rememberSaveable { mutableStateOf("") }
     var openId by remember { mutableStateOf<String?>(null) }
 
-    val seenItems = remember(user.seen) {
+    val seenItems = remember(user.seen, user.spanishVariant) {
         user.seen.mapNotNull(vm.content::byId)
             .sortedWith(compareBy<StudyItem>({ it is FalseFriend }, { it.headword }))
     }

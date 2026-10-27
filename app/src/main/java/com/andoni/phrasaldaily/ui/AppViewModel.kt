@@ -4,11 +4,13 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.andoni.phrasaldaily.BuildConfig
+import com.andoni.phrasaldaily.DemoMode
 import com.andoni.phrasaldaily.data.ContentMode
 import com.andoni.phrasaldaily.data.ContentRepository
 import com.andoni.phrasaldaily.data.FalseFriend
 import com.andoni.phrasaldaily.data.ItemType
 import com.andoni.phrasaldaily.data.PhrasalVerb
+import com.andoni.phrasaldaily.data.SpanishVariant
 import com.andoni.phrasaldaily.data.StudyItem
 import com.andoni.phrasaldaily.data.ThemeMode
 import com.andoni.phrasaldaily.data.UserData
@@ -24,6 +26,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -44,6 +47,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     val speaker = Speaker(app)
 
     val user: StateFlow<UserData?> = users.data
+        .onEach { content.variant = it.spanishVariant }
         .stateIn(viewModelScope, SharingStarted.Eagerly, null)
 
     private val _newAchievements = MutableStateFlow<List<String>>(emptyList())
@@ -63,7 +67,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     private var lastUpdateCheck = 0L
 
     fun checkForUpdates(manual: Boolean = false) = viewModelScope.launch {
-        if (!BuildConfig.SELF_UPDATE) return@launch
+        if (!BuildConfig.SELF_UPDATE || DemoMode.active) return@launch
         val now = System.currentTimeMillis()
         if (!manual && now - lastUpdateCheck < 60 * 60 * 1000L) return@launch
         lastUpdateCheck = now
@@ -117,9 +121,16 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         if (u.notificationsEnabled) ReminderScheduler.schedule(getApplication(), u.reminderHour, u.reminderMinute)
     }
 
-    fun completeOnboarding(name: String, mode: ContentMode, hour: Int, minute: Int, notifications: Boolean) =
+    fun completeOnboarding(
+        name: String,
+        variant: SpanishVariant,
+        mode: ContentMode,
+        hour: Int,
+        minute: Int,
+        notifications: Boolean,
+    ) =
         viewModelScope.launch {
-            users.completeOnboarding(name, mode, hour, minute, notifications)
+            users.completeOnboarding(name, variant, mode, hour, minute, notifications)
             if (notifications) ReminderScheduler.schedule(getApplication(), hour, minute)
             onAppOpened()
         }
@@ -161,6 +172,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         users.markSeen(todayItems(users.current()).map { it.id })
     }
     fun setTheme(theme: ThemeMode) = viewModelScope.launch { users.setTheme(theme) }
+    fun setSpanishVariant(variant: SpanishVariant) = viewModelScope.launch { users.setSpanishVariant(variant) }
     fun setSpeechRate(rate: Float) = viewModelScope.launch { users.setSpeechRate(rate) }
 
     fun setNotificationsEnabled(enabled: Boolean) = viewModelScope.launch {

@@ -16,13 +16,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.andoni.phrasaldaily.ads.Ads
+import com.andoni.phrasaldaily.data.SpanishVariant
 import com.andoni.phrasaldaily.data.ThemeMode
+import com.andoni.phrasaldaily.data.UserRepository
 import com.andoni.phrasaldaily.ui.AppViewModel
 import com.andoni.phrasaldaily.ui.MainScaffold
 import com.andoni.phrasaldaily.ui.screens.AchievementUnlockedDialog
 import com.andoni.phrasaldaily.ui.screens.OnboardingScreen
 import com.andoni.phrasaldaily.ui.screens.UpdateDialog
 import com.andoni.phrasaldaily.ui.theme.PhrasalTheme
+import kotlinx.coroutines.runBlocking
 
 class MainActivity : ComponentActivity() {
 
@@ -31,7 +34,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        Ads.gatherConsentAndStart(this)
+        val demoTab = if (BuildConfig.DEBUG) intent.getStringExtra("demo_tab") else null
+        if (demoTab != null) {
+            DemoMode.active = true
+            val variant = runCatching { SpanishVariant.valueOf(intent.getStringExtra("demo_variant") ?: "") }
+                .getOrDefault(SpanishVariant.SPAIN)
+            runBlocking { UserRepository.get(this@MainActivity).seedDemo("Laura", variant) }
+        } else {
+            Ads.gatherConsentAndStart(this)
+        }
         setContent {
             val user by vm.user.collectAsStateWithLifecycle()
             val newAchievements by vm.newAchievements.collectAsStateWithLifecycle()
@@ -44,12 +55,12 @@ class MainActivity : ComponentActivity() {
                         u == null -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                             Text("💬", fontSize = 64.sp)
                         }
-                        !u.onboarded -> OnboardingScreen { name, mode, hour, minute, notifications ->
-                            vm.completeOnboarding(name, mode, hour, minute, notifications)
+                        !u.onboarded -> OnboardingScreen(u.spanishVariant) { name, variant, mode, hour, minute, notifications ->
+                            vm.completeOnboarding(name, variant, mode, hour, minute, notifications)
                         }
-                        else -> MainScaffold(vm, u)
+                        else -> MainScaffold(vm, u, startTab = demoTab ?: "today")
                     }
-                    update?.let { info ->
+                    if (!DemoMode.active) update?.let { info ->
                         UpdateDialog(
                             info = info,
                             progress = updateProgress,
@@ -57,7 +68,7 @@ class MainActivity : ComponentActivity() {
                             onDismiss = { vm.dismissUpdate() },
                         )
                     }
-                    if (update == null && newAchievements.isNotEmpty()) {
+                    if (!DemoMode.active && update == null && newAchievements.isNotEmpty()) {
                         AchievementUnlockedDialog(newAchievements) { vm.dismissAchievements() }
                     }
                 }

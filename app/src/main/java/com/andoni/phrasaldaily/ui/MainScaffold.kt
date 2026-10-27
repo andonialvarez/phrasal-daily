@@ -49,7 +49,7 @@ private val tabs = listOf(
 )
 
 @Composable
-fun MainScaffold(vm: AppViewModel, user: UserData) {
+fun MainScaffold(vm: AppViewModel, user: UserData, startTab: String = "today") {
     val nav = rememberNavController()
     val backStack by nav.currentBackStackEntryAsState()
     val current = backStack?.destination?.route
@@ -79,7 +79,7 @@ fun MainScaffold(vm: AppViewModel, user: UserData) {
         },
     ) { padding ->
         Box(Modifier.padding(padding)) {
-            NavHost(nav, startDestination = "today") {
+            NavHost(nav, startDestination = tabs.firstOrNull { it.route == startTab }?.route ?: "today") {
                 composable("today") { TodayScreen(vm, user, onStartQuiz = { go("quiz") }) }
                 composable("quiz") { QuizScreen(vm, user) }
                 composable("library") { LibraryScreen(vm, user) }

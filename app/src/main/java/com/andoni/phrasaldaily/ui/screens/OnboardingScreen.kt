@@ -47,13 +47,25 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.andoni.phrasaldaily.data.ContentMode
+import com.andoni.phrasaldaily.data.SpanishVariant
 import com.andoni.phrasaldaily.notify.Notifications
 
 @Composable
-fun OnboardingScreen(onFinish: (name: String, mode: ContentMode, hour: Int, minute: Int, notifications: Boolean) -> Unit) {
+fun OnboardingScreen(
+    initialVariant: SpanishVariant,
+    onFinish: (
+        name: String,
+        variant: SpanishVariant,
+        mode: ContentMode,
+        hour: Int,
+        minute: Int,
+        notifications: Boolean,
+    ) -> Unit,
+) {
     val context = LocalContext.current
     var step by rememberSaveable { mutableIntStateOf(0) }
     var name by rememberSaveable { mutableStateOf("") }
+    var variant by rememberSaveable { mutableStateOf(initialVariant) }
     var mode by rememberSaveable { mutableStateOf(ContentMode.PHRASAL) }
     var hour by rememberSaveable { mutableIntStateOf(19) }
     var minute by rememberSaveable { mutableIntStateOf(0) }
@@ -61,14 +73,14 @@ fun OnboardingScreen(onFinish: (name: String, mode: ContentMode, hour: Int, minu
     var pickingTime by rememberSaveable { mutableStateOf(false) }
 
     val permissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-        onFinish(name, mode, hour, minute, granted)
+        onFinish(name, variant, mode, hour, minute, granted)
     }
 
     fun finish() {
         if (notifications && Build.VERSION.SDK_INT >= 33 && !Notifications.canPost(context)) {
             permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
         } else {
-            onFinish(name, mode, hour, minute, notifications)
+            onFinish(name, variant, mode, hour, minute, notifications)
         }
     }
 
@@ -136,6 +148,14 @@ fun OnboardingScreen(onFinish: (name: String, mode: ContentMode, hour: Int, minu
                             keyboardActions = KeyboardActions(onNext = { if (name.isNotBlank()) step = 2 }),
                             modifier = Modifier.fillMaxWidth(),
                         )
+                        Spacer(Modifier.height(8.dp))
+                        Text("¿Qué español hablas?", style = MaterialTheme.typography.titleMedium)
+                        Text(
+                            "Adapto las traducciones y los ejemplos a tu forma de hablar.",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        SpanishVariantPicker(variant) { variant = it }
                     }
                     2 -> {
                         Text(

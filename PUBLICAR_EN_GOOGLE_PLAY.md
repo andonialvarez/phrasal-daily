@@ -77,9 +77,38 @@ Revisión del 15 de octubre de 2026 frente a los requisitos actuales de Google P
 > • Estadísticas semanales, mensuales y calendario de estudio
 > • Repasos tipo test para que no se te olvide nada
 > • Biblioteca con buscador y favoritos
+> • Traducciones adaptadas al español de España o de Latinoamérica
 > • Te llama por tu nombre, con tema claro u oscuro
 >
 > Gratis y sin registro: tu progreso se guarda en tu móvil.
+
+### Ficha para Latinoamérica (es-419)
+
+En **Ficha de Play Store principal > Gestionar traducciones > Añadir tus propias traducciones**, añade **Español (Latinoamérica) – es-419** y pega:
+
+**Nombre:** Phrasal Daily: inglés diario
+
+**Descripción breve:** Un phrasal verb al día con pronunciación, ejemplos, rachas y recordatorios.
+
+**Descripción completa:**
+
+> Aprende inglés de verdad, un día a la vez. Phrasal Daily te enseña cada día un phrasal verb nuevo: cómo se escribe, qué significa, cómo se pronuncia y una frase de ejemplo para usarlo.
+>
+> ¿Te confunden los false friends? Activa también una palabra trampa diaria, de esas que parecen lo que no son ("actually" no es "actualmente").
+>
+> • Palabra del día con traducción, significado y ejemplo
+> • Pronunciación con fonética, guía en español y voz en inglés (normal y lenta)
+> • Recordatorio diario a la hora que elijas, con frases motivadoras que cambian cada día
+> • Rachas de días seguidos y más de 20 logros por desbloquear
+> • Estadísticas semanales, mensuales y calendario de estudio
+> • Repasos tipo test para que no se te olvide nada
+> • Biblioteca con buscador y favoritos
+> • Traducciones adaptadas al español de Latinoamérica o de España
+> • Te llama por tu nombre, con tema claro u oscuro
+>
+> Gratis y sin registro: tu progreso se guarda en tu celular.
+
+Usa las capturas de `store/screenshots/latam/`. Cuando pases a producción, añade en **Países/Territorios** los de Latinoamérica.
 
 ## 6. A tener en cuenta
 

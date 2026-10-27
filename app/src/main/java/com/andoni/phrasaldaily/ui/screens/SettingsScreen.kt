@@ -56,6 +56,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.andoni.phrasaldaily.BuildConfig
 import com.andoni.phrasaldaily.ads.Ads
 import com.andoni.phrasaldaily.data.ContentMode
+import com.andoni.phrasaldaily.data.SpanishVariant
 import com.andoni.phrasaldaily.data.ThemeMode
 import com.andoni.phrasaldaily.data.UserData
 import com.andoni.phrasaldaily.notify.Notifications
@@ -105,6 +106,16 @@ fun SettingsScreen(vm: AppViewModel, user: UserData) {
                 }
                 Icon(Icons.Outlined.Edit, "Editar nombre")
             }
+        }
+
+        SettingsCard("Idioma de las traducciones") {
+            Text(
+                "Adapta las traducciones y los ejemplos al español de tu país.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Spacer(Modifier.height(8.dp))
+            SpanishVariantPicker(user.spanishVariant) { vm.setSpanishVariant(it) }
         }
 
         SettingsCard("Contenido diario") {
@@ -173,7 +184,7 @@ fun SettingsScreen(vm: AppViewModel, user: UserData) {
             }
             if (!vm.speaker.available) {
                 Text(
-                    "Tu móvil no tiene voz en inglés instalada. Instálala en Ajustes > Sistema > Idioma > Texto a voz.",
+                    "Tu ${phoneWord(user)} no tiene voz en inglés instalada. Instálala en Ajustes > Sistema > Idioma > Texto a voz.",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.error,
                 )
@@ -220,7 +231,7 @@ fun SettingsScreen(vm: AppViewModel, user: UserData) {
 
         SettingsCard("Acerca de") {
             Text(
-                "Tu progreso se guarda solo en este móvil. Los anuncios los sirve Google AdMob; más detalles en la política de privacidad.",
+                "Tu progreso se guarda solo en este ${phoneWord(user)}. Los anuncios los sirve Google AdMob; más detalles en la política de privacidad.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -316,6 +327,24 @@ fun ContentModePicker(selected: ContentMode, onSelect: (ContentMode) -> Unit) {
                         color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
+        }
+    }
+}
+
+/** "móvil" in Spain, "celular" in Latin America. */
+fun phoneWord(user: UserData) = if (user.spanishVariant == SpanishVariant.LATAM) "celular" else "móvil"
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun SpanishVariantPicker(selected: SpanishVariant, onSelect: (SpanishVariant) -> Unit) {
+    val labels = mapOf(SpanishVariant.SPAIN to "🇪🇸 España", SpanishVariant.LATAM to "🌎 Latinoamérica")
+    SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
+        SpanishVariant.entries.forEachIndexed { i, variant ->
+            SegmentedButton(
+                selected = variant == selected,
+                onClick = { onSelect(variant) },
+                shape = SegmentedButtonDefaults.itemShape(index = i, count = SpanishVariant.entries.size),
+            ) { Text(labels.getValue(variant)) }
         }
     }
 }
