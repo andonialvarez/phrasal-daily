@@ -110,6 +110,20 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    /**
+     * Recent days (up to a week back) the user didn't open the app and whose words they haven't
+     * studied yet, newest first. They can catch up on them from the Today screen.
+     */
+    fun missedDays(user: UserData, today: LocalDate = LocalDate.now(), maxDays: Long = 7): List<LocalDate> =
+        (1..maxDays).map { today.minusDays(it) }
+            .filter { !it.isBefore(user.startDate) && it !in user.visits }
+            .filter { day -> todayItems(user, day).any { it.id !in user.seen } }
+
+    /** Studying a missed day adds its words to the library and the review (the streak stays as it was). */
+    fun catchUpDay(date: LocalDate) = viewModelScope.launch {
+        users.markSeen(todayItems(users.current(), date).map { it.id })
+    }
+
     /** Called every time the app comes to the foreground. */
     fun onAppOpened() = viewModelScope.launch {
         checkForUpdates()
@@ -199,7 +213,9 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     // ---- Quiz ----
 
     fun buildQuiz(user: UserData, size: Int = 6): List<QuizQuestion> {
+        // Only words the user has actually studied: today's plus any day they opened or caught up on.
         val pool = (user.seen.mapNotNull(content::byId) + todayItems(user)).distinctBy { it.id }
+        val known = pool.map { it.id }.toSet()
         if (pool.isEmpty()) return emptyList()
         // Prefer items not yet marked as learned, then mix in the rest.
         val ordered = pool.shuffled().sortedBy { it.id in user.learned }
@@ -208,18 +224,20 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         while (questions.size < size && round < 2) {
             for (item in ordered) {
                 if (questions.size >= size) break
-                questions += makeQuestion(item, reverse = (round + questions.size) % 2 == 1)
+                questions += makeQuestion(item, known, reverse = (round + questions.size) % 2 == 1)
             }
             round++
         }
         return questions.shuffled()
     }
 
-    private fun makeQuestion(item: StudyItem, reverse: Boolean): QuizQuestion {
-        val others: List<StudyItem> = when (item) {
+    private fun makeQuestion(item: StudyItem, known: Set<String>, reverse: Boolean): QuizQuestion {
+        // Wrong answers come from studied words first; unseen ones only fill in while the pool is small.
+        val sameType: List<StudyItem> = when (item) {
             is PhrasalVerb -> content.phrasalVerbs
             is FalseFriend -> content.falseFriends
-        }.filter { it.id != item.id }.shuffled().take(12)
+        }.filter { it.id != item.id }.shuffled()
+        val others = sameType.filter { it.id in known } + sameType.filter { it.id !in known }
 
         return if (!reverse) {
             val distractors = others.map { it.translation }.filter { it != item.translation }.distinct().take(3)

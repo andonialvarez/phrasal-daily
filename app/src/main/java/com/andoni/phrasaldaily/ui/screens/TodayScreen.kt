@@ -4,6 +4,7 @@ import android.Manifest
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,18 +19,24 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.SwapHoriz
 import androidx.compose.material.icons.outlined.NotificationsOff
 import androidx.compose.material3.Button
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -55,6 +62,7 @@ import java.util.Locale
 
 private val spanish = Locale.forLanguageTag("es-ES")
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TodayScreen(vm: AppViewModel, user: UserData, onStartQuiz: () -> Unit) {
     val context = LocalContext.current
@@ -62,6 +70,8 @@ fun TodayScreen(vm: AppViewModel, user: UserData, onStartQuiz: () -> Unit) {
     val stats = remember(user.visits) { StatsCalculator.compute(user.visits, today) }
     val items = vm.todayItems(user, today)
     val dayIndex = user.dayIndex(today)
+    val missed = vm.missedDays(user, today)
+    var catchUpDate by remember { mutableStateOf<LocalDate?>(null) }
 
     var permissionAsked by remember { mutableStateOf(false) }
     var canNotify by remember { mutableStateOf(Notifications.canPost(context)) }
@@ -176,6 +186,33 @@ fun TodayScreen(vm: AppViewModel, user: UserData, onStartQuiz: () -> Unit) {
             }
         }
 
+        if (missed.isNotEmpty()) {
+            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer)) {
+                Column(Modifier.padding(16.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Filled.History, null, tint = MaterialTheme.colorScheme.onTertiaryContainer)
+                        Spacer(Modifier.width(8.dp))
+                        Text(
+                            if (missed.size == 1) "Te falta 1 día por estudiar" else "Te faltan ${missed.size} días por estudiar",
+                            style = MaterialTheme.typography.titleSmall,
+                            color = MaterialTheme.colorScheme.onTertiaryContainer,
+                        )
+                    }
+                    Text(
+                        "Ponte al día: lo que estudies se añade a tu biblioteca y al repaso.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onTertiaryContainer,
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        missed.forEach { date ->
+                            AssistChip(onClick = { catchUpDate = date }, label = { Text(dayLabel(date, today)) })
+                        }
+                    }
+                }
+            }
+        }
+
         Button(onClick = onStartQuiz, modifier = Modifier.fillMaxWidth().height(52.dp)) {
             Text("Repasar lo aprendido")
             Spacer(Modifier.width(8.dp))
@@ -199,4 +236,49 @@ fun TodayScreen(vm: AppViewModel, user: UserData, onStartQuiz: () -> Unit) {
         )
         Spacer(Modifier.height(8.dp))
     }
+
+    val date = catchUpDate
+    if (date != null) {
+        LaunchedEffect(date) { vm.catchUpDay(date) }
+        val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+        ModalBottomSheet(onDismissRequest = { catchUpDate = null }, sheetState = sheetState) {
+            Column(
+                Modifier
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 16.dp)
+                    .padding(bottom = 32.dp),
+                verticalArrangement = Arrangement.spacedBy(14.dp),
+            ) {
+                Text(
+                    if (date >= today.minusDays(2)) "Lección de ${dayLabel(date, today).lowercase(spanish)}"
+                    else "Lección del ${dayLabel(date, today).lowercase(spanish)}",
+                    style = MaterialTheme.typography.titleLarge,
+                )
+                Text(
+                    "Lo que veas aquí entra en tu biblioteca y en el repaso.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                vm.todayItems(user, date).forEach { item ->
+                    StudyCard(
+                        item = item,
+                        isFavorite = item.id in user.favorites,
+                        isLearned = item.id in user.learned,
+                        onSpeak = vm::speak,
+                        onSpeakSlow = { vm.speaker.speak(it, 0.45f) },
+                        onToggleFavorite = { vm.setFavorite(item.id, item.id !in user.favorites) },
+                        onToggleLearned = { vm.setLearned(item.id, item.id !in user.learned) },
+                        onShare = { shareItem(context, item) },
+                    )
+                }
+            }
+        }
+    }
+}
+
+/** "Ayer", "Anteayer" or e.g. "Lunes 27". */
+private fun dayLabel(date: LocalDate, today: LocalDate): String = when (date) {
+    today.minusDays(1) -> "Ayer"
+    today.minusDays(2) -> "Anteayer"
+    else -> date.format(DateTimeFormatter.ofPattern("EEEE d", spanish)).replaceFirstChar { it.titlecase(spanish) }
 }
